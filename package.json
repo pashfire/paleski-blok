@@ -1,0 +1,23 @@
+{
+  "name": "paleski-blok",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pashfire/paleski-blok.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pashfire/paleski-blok/issues"
+  },
+  "homepage": "https://github.com/pashfire/paleski-blok#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
