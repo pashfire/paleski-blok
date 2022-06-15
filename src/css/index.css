@@ -1,4 +1,5 @@
 html {
+  font-family: 'Raleway';
   font-size: 10px;
   line-height: 10px;
   color: #2B3F4A; }
@@ -17,3 +18,19 @@ a {
   color: #4456AD; }
   a:hover {
     text-decoration: underline; }
+
+.header-navigation {
+  background: white; }
+  .header-navigation__wrapper {
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .header-navigation__link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    color: #2B3F4A; }
+    .header-navigation__link:not(:last-child) {
+      margin-right: 60px; }
