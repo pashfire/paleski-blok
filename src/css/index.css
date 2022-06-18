@@ -37,6 +37,7 @@ a {
     line-height: 2.3rem;
     color: #2B3F4A;
     text-decoration: none;
+    text-transform: capitalize;
     transition: 0.5s; }
     .header-navigation__link::after {
       position: absolute;
@@ -85,12 +86,14 @@ a {
   font-weight: 400;
   font-size: 2rem;
   line-height: 2.3rem;
-  transition: color 0.5s, background-color 0.5s; }
+  fill: white;
+  transition: fill 0.5s, color 0.5s, background-color 0.5s; }
   .default-button:hover, .default-button:focus {
     background-color: white;
     border: 2px solid #D3A237;
     color: #2B3F4A;
-    transition: color 0.5s, background-color 0.5s; }
+    fill: #2B3F4A;
+    transition: fill 0.5s, color 0.5s, background-color 0.5s; }
   .default-button__element {
     text-transform: capitalize; }
     .default-button__element:not(:last-child) {
