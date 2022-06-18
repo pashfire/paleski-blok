@@ -2,18 +2,18 @@
     background: $background-default;
 
     &__wrapper {
-        //max-width: 1214px;
         padding: 16px 0;
         display: flex;
         align-items: center;
         justify-content: center;
-
+        gap: 6rem;
+        //max-width: 1214px;
     }
 
     &__element {
-        &:not(:last-child) {
-            margin-right: 60px;
-        }
+        // &:not(:last-child) {
+        //     margin-right: 60px;
+        // }
     }
 
     &__link {
