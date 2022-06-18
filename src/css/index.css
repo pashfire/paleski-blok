@@ -37,7 +37,6 @@ a {
     line-height: 2.3rem;
     color: #2B3F4A;
     text-decoration: none;
-    text-transform: capitalize;
     transition: 0.5s; }
     .header-navigation__link::after {
       position: absolute;
@@ -68,10 +67,7 @@ a {
     border-bottom: 2px solid white;
 
     transition: width 0.3s ease;
-}
-
-a.button.five:hover:after {
-    left: 0;
+}git push --force-with-lease
     width: 100%;
     transition: width .3s ease;
 } */
