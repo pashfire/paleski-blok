@@ -25,4 +25,10 @@ a {
 }
 
 .wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+header {
 }

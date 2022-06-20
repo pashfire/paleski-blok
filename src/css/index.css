@@ -19,14 +19,20 @@ a {
   a:hover {
     text-decoration: underline; }
 
+.wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center; }
+
 .header-navigation {
   background: white; }
   .header-navigation__wrapper {
     padding: 16px 0;
+    flex-basis: 1214px;
     display: flex;
+    justify-content: start;
     align-items: center;
-    justify-content: center;
-    gap: 3rem; }
+    gap: 6rem; }
   .header-navigation__link {
     position: relative;
     display: block;
@@ -72,9 +78,10 @@ a {
     transition: width .3s ease;
 } */
 .header__wrapper {
+  flex-basis: 1214px;
   display: flex;
+  justify-content: start;
   align-items: center;
-  justify-content: center;
   gap: 3rem;
   padding-top: 1.6rem; }
 

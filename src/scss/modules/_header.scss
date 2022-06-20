@@ -1,8 +1,9 @@
 .header {
     &__wrapper {
-        display: flex;
+        flex-basis: 1214px;
+        display:flex;
+        justify-content: start;
         align-items: center;
-        justify-content: center;
         gap: 3rem;
         padding-top: 1.6rem;
     }
