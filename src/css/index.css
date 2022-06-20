@@ -25,7 +25,8 @@ a {
   justify-content: center; }
 
 .header-navigation {
-  background: white; }
+  background: white;
+  margin-bottom: 10rem; }
   .header-navigation__wrapper {
     padding: 16px 0;
     flex-basis: 1214px;
