@@ -1,3 +1,9 @@
+//container breakpoints
+@use 'sass:math';
+$containerWidth: 1214;
+$breakPoint1204: 1203.98 + px;
+
+
 //palette colors
 $primary-color1: #2B3F4A;
 $primary-color2: #DDE9EA;
