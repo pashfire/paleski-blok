@@ -94,3 +94,21 @@
     }
 
 }
+
+@media (max-width: 1202px) {
+    .header__info-block {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .header__search-block {
+        display: none;
+    }
+}
+
+@media (max-width: 660px) {
+    .header__logo-text {
+        display: none;
+    }
+}

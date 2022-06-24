@@ -63,22 +63,99 @@ a {
       transform: scaleX(1);
       transform-origin: left; }
 
-/* a.button.five:after {
-    content: '';
-    position: absolute;
+.burger {
+  width: 50px;
+  cursor: pointer;
+  /* don't need for small devices */
+  display: none; }
+  .burger__element {
+    border-radius: 1rem;
+    height: 0.5rem;
+    /* <<--- This value also affects on element positioning */
+    background: #2B3F4A;
+    transition: all 0.3s;
+    position: relative; }
+  .burger__element + .burger__element {
+    margin-top: 0.8rem; }
+  .burger.active .burger__element:nth-child(1) {
+    animation: ease 0.8s top forwards; }
+  .burger__element:nth-child(1) {
+    animation: ease 0.8s top-2 forwards; }
+  .burger.active .burger__element:nth-child(2) {
+    animation: ease 0.8s scaled forwards; }
+  .burger__element:nth-child(2) {
+    animation: ease 0.8s scaled-2 forwards; }
+  .burger.active .burger__element:nth-child(3) {
+    animation: ease 0.8s bottom forwards; }
+  .burger__element:nth-child(3) {
+    animation: ease 0.8s bottom-2 forwards; }
+
+@keyframes top {
+  0% {
+    top: 0;
+    transform: rotate(0); }
+  50% {
+    top: 1.32rem;
+    transform: rotate(0); }
+  100% {
+    top: 1.32rem;
+    transform: rotate(45deg); } }
+
+@keyframes top-2 {
+  0% {
+    top: 1.32rem;
+    transform: rotate(45deg); }
+  50% {
+    top: 1.32rem;
+    transform: rotate(0deg); }
+  100% {
+    top: 0;
+    transform: rotate(0deg); } }
+
+@keyframes bottom {
+  0% {
     bottom: 0;
-    right: 0;
+    transform: rotate(0); }
+  50% {
+    bottom: 1.32rem;
+    transform: rotate(0); }
+  100% {
+    bottom: 1.32rem;
+    transform: rotate(135deg); } }
 
-    width: 0%;
-    height: 100%;
+@keyframes bottom-2 {
+  0% {
+    bottom: 1.32rem;
+    transform: rotate(135deg); }
+  50% {
+    bottom: 1.32rem;
+    transform: rotate(0); }
+  100% {
+    bottom: 0;
+    transform: rotate(0); } }
 
-    border-bottom: 2px solid white;
+@keyframes scaled {
+  50% {
+    transform: scale(0); }
+  100% {
+    transform: scale(0); } }
 
-    transition: width 0.3s ease;
-}git push --force-with-lease
-    width: 100%;
-    transition: width .3s ease;
-} */
+@keyframes scaled-2 {
+  0% {
+    transform: scale(0); }
+  50% {
+    transform: scale(0); }
+  100% {
+    transform: scale(1); } }
+
+@media (max-width: 868px) {
+  .burger {
+    display: block; }
+  .header-navigation {
+    display: none; }
+  .header__info-block {
+    display: none; } }
+
 .header__wrapper {
   flex-basis: 1214px;
   display: flex;
@@ -156,6 +233,18 @@ a {
   color: #D3A237; }
   .header__phone-block:hover {
     text-decoration: none; }
+
+@media (max-width: 1202px) {
+  .header__info-block {
+    display: none; } }
+
+@media (max-width: 900px) {
+  .header__search-block {
+    display: none; } }
+
+@media (max-width: 660px) {
+  .header__logo-text {
+    display: none; } }
 
 .default-button {
   align-items: center;
