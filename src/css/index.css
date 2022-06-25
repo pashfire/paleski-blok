@@ -148,13 +148,28 @@ a {
   100% {
     transform: scale(1); } }
 
-@media (max-width: 868px) {
+@media (max-width: 1250px) {
+  .header-navigation__wrapper {
+    flex-basis: 960px; } }
+
+@media (max-width: 999px) {
+  .header-navigation__wrapper {
+    flex-basis: 90%;
+    justify-content: space-between;
+    gap: 4rem; } }
+
+@media (max-width: 899px) {
   .burger {
     display: block; }
   .header-navigation {
-    display: none; }
-  .header__info-block {
     display: none; } }
+
+@media (max-width: 459px) {
+  .burger {
+    width: 30px;
+    display: block; }
+  .burger__element {
+    height: 0.5rem; } }
 
 .header__wrapper {
   flex-basis: 1214px;
@@ -224,7 +239,7 @@ a {
   height: 50px;
   font-style: normal;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 2.4rem;
   line-height: 28px;
   display: flex;
   align-items: center;
@@ -234,17 +249,51 @@ a {
   .header__phone-block:hover {
     text-decoration: none; }
 
-@media (max-width: 1202px) {
+@media (max-width: 1250px) {
+  .header__wrapper {
+    flex-basis: 960px; }
   .header__info-block {
     display: none; } }
 
-@media (max-width: 900px) {
-  .header__search-block {
-    display: none; } }
+@media (max-width: 999px) {
+  .header__wrapper {
+    flex-basis: 90%;
+    justify-content: space-between; }
+  .header__logo-text {
+    min-width: 210px; }
+  .header__phone-block {
+    min-width: 230px; } }
 
-@media (max-width: 660px) {
+@media (max-width: 899px) {
+  .header__search-block {
+    display: none; }
+  .header__phone-block {
+    max-width: 230px; } }
+
+@media (max-width: 730px) {
+  .header__search-block {
+    display: none; }
   .header__logo-text {
     display: none; } }
+
+@media (max-width: 459px) {
+  .header__logo-img {
+    height: 60px; }
+  .header__phone-block {
+    font-size: 1.8rem;
+    min-width: 171px; } }
+
+@media (max-width: 459px) {
+  .header__logo-img {
+    height: 50px; }
+  .header__phone-block {
+    font-size: 1.4rem;
+    min-width: 151px; } }
+
+@media (max-width: 350px) {
+  .header__phone-block {
+    font-size: 1.4rem;
+    min-width: 135px; } }
 
 .default-button {
   align-items: center;

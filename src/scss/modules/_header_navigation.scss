@@ -64,7 +64,7 @@ $anim-time: 0.8s;
     cursor: pointer; /* don't need for small devices */
     display: none;
 
-    &__element {        
+    &__element {
         border-radius: 1rem;
         height: 0.5rem; /* <<--- This value also affects on element positioning */
         background: $primary-color1;
@@ -181,18 +181,37 @@ $anim-time: 0.8s;
         transform: scale(1);
     }
 }
+@media (max-width: 1250px) {
+    .header-navigation__wrapper {
+        flex-basis: 960px;
+    }
+}
 
-@media (max-width: 868px) {
+@media (max-width: 999px) {
+    .header-navigation__wrapper {
+        flex-basis: 90%;
+        justify-content: space-between;
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 899px) {
     .burger {
-         display: block;
+        display: block;
     }
 
     .header-navigation {
         display: none;
     }
-
-    .header__info-block {
-        display: none;
-    }
 }
 
+@media (max-width: 459px) {
+    .burger {
+        width: 30px;
+        display: block;
+    }
+    .burger__element {
+        height: 0.5rem;
+    }
+
+}
