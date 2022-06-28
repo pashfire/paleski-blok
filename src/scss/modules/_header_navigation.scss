@@ -55,7 +55,7 @@
 
 // Burger style
 // adjust this values for your project
-$element-spacing: 0.8rem;
+$element-spacing: 0.7rem;
 $element-movement: 1.32rem;
 $anim-time: 0.8s;
 
@@ -101,86 +101,7 @@ $anim-time: 0.8s;
     }
 }
 
-@keyframes top {
-    0% {
-        top: 0;
-        transform: rotate(0);
-    }
-    50% {
-        top: $element-movement;
-        transform: rotate(0);
-    }
-    100% {
-        top: $element-movement;
-        transform: rotate(45deg);
-    }
-}
 
-@keyframes top-2 {
-    0% {
-        top: $element-movement;
-        transform: rotate(45deg);
-    }
-    50% {
-        top: $element-movement;
-        transform: rotate(0deg);
-    }
-    100% {
-        top: 0;
-        transform: rotate(0deg);
-    }
-}
-
-@keyframes bottom {
-    0% {
-        bottom: 0;
-        transform: rotate(0);
-    }
-    50% {
-        bottom: $element-movement;
-        transform: rotate(0);
-    }
-    100% {
-        bottom: $element-movement;
-        transform: rotate(135deg);
-    }
-}
-
-@keyframes bottom-2 {
-    0% {
-        bottom: $element-movement;
-        transform: rotate(135deg);
-    }
-    50% {
-        bottom: $element-movement;
-        transform: rotate(0);
-    }
-    100% {
-        bottom: 0;
-        transform: rotate(0);
-    }
-}
-
-@keyframes scaled {
-    50% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(0);
-    }
-}
-
-@keyframes scaled-2 {
-    0% {
-        transform: scale(0);
-    }
-    50% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
 @media (max-width: 1250px) {
     .header-navigation__wrapper {
         flex-basis: 960px;
@@ -195,6 +116,9 @@ $anim-time: 0.8s;
     }
 }
 
+/************************************/
+/*START of @media (max-width: 899px)*/
+/************************************/
 @media (max-width: 899px) {
     .burger {
         display: block;
@@ -203,15 +127,102 @@ $anim-time: 0.8s;
     .header-navigation {
         display: none;
     }
+
+    @keyframes top {
+        0% {
+            top: 0;
+            transform: rotate(0);
+        }
+        50% {
+            top: $element-movement;
+            transform: rotate(0);
+        }
+        100% {
+            top: $element-movement;
+            transform: rotate(45deg);
+        }
+    }
+    
+    @keyframes top-2 {
+        0% {
+            top: $element-movement;
+            transform: rotate(45deg);
+        }
+        50% {
+            top: $element-movement;
+            transform: rotate(0deg);
+        }
+        100% {
+            top: 0;
+            transform: rotate(0deg);
+        }
+    }
+    
+    @keyframes bottom {
+        0% {
+            bottom: 0;
+            transform: rotate(0);
+        }
+        50% {
+            bottom: $element-movement;
+            transform: rotate(0);
+        }
+        100% {
+            bottom: 1.1rem;
+            transform: rotate(135deg);
+        }
+    }
+    
+    @keyframes bottom-2 {
+        0% {
+            bottom: $element-movement;
+            transform: rotate(135deg);
+        }
+        50% {
+            bottom: $element-movement;
+            transform: rotate(0);
+        }
+        100% {
+            bottom: 0;
+            transform: rotate(0);
+        }
+    }
+    
+    @keyframes scaled {
+        50% {
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(0);
+        }
+    }
+    
+    @keyframes scaled-2 {
+        0% {
+            transform: scale(0);
+        }
+        50% {
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
 }
+/************************************/
+/* END of @media (max-width: 899px) */
+/************************************/
 
 @media (max-width: 459px) {
     .burger {
         width: 30px;
         display: block;
     }
-    .burger__element {
-        height: 0.5rem;
+    .burger__element + .burger__element {
+        margin-top: 0.85rem;
     }
+    .burger__element {
+        height: 0.3rem;
 
+    }
 }
