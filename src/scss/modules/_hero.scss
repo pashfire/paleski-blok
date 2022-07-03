@@ -1,0 +1,46 @@
+.hero {
+    &__wrapper {
+        flex-basis: 1214px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    &__heading-text {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        font-family: "Raleway";
+        font-style: normal;
+        color: $primary-color1;
+    }
+
+    &__heading {
+        font-weight: 700;
+        font-size: 3.8rem;
+        line-height: 130%;
+    }
+
+    &__heading-colored {
+        color: $primary-color3;
+    }
+
+    &__subheading {
+        font-weight: 400;
+        font-size: 2.4rem;
+        line-height: 130%;
+    }
+
+    &__heading-link {
+    }
+
+    &__image {
+    }
+
+    .default-button {
+        max-width: 22rem;
+        justify-content: center;
+    }
+}
