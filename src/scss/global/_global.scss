@@ -1,11 +1,13 @@
 html {
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-size: 10px;
     line-height: 10px;
     color: $primary-color1;
 }
 
 body {
+    width: 100%;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
 }
