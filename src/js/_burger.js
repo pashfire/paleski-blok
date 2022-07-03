@@ -1,6 +1,6 @@
 "use strict";
 
-const navSlide = () => {
+export function burgerMenu() {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.header-navigation__wrapper');
  
@@ -10,5 +10,3 @@ const navSlide = () => {
     nav.classList.toggle('nav-active');
   });  
 }
-
-navSlide();

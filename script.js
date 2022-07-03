@@ -1,3 +1,4 @@
-import * as Burger from './src/js/_burger.js';
+"use strict";
+import {burgerMenu} from './src/js/_burger.js';
 
-Burger();
+burgerMenu();
