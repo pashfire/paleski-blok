@@ -1,7 +1,7 @@
 @import "../common/default-button";
 
 .hero {
-    background-image: url("http://localhost:3000/src/assets/hero/hero-ornament.svg");
+    background-image: url("/src/assets/hero/hero-ornament.svg");
     background-position: left;
     background-origin: border-box;
     background-repeat: no-repeat;
@@ -59,7 +59,7 @@
     .hero {
         background-image: url("http://localhost:3000/src/assets/hero/hero-ornament-min.svg");
     }
-    
+
     .hero__wrapper {
         flex-basis: 960px;
     }
