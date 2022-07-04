@@ -496,7 +496,7 @@ a {
             rgb(235, 230, 255) 53.39%,
             #f0d6b2 100%
         ); */
-  background-image: url("/src/assets/super-sale/super-sale-ornament.png"), linear-gradient(90deg, #faedcd 0%, #daf6ff 27.86%, #ebe6ff 53.39%, #f0d6b2 100%);
+  background-image: url("https://pashfire.github.io/paleski-blok/src/assets/super-sale/super-sale-ornament.png"), linear-gradient(90deg, #faedcd 0%, #daf6ff 27.86%, #ebe6ff 53.39%, #f0d6b2 100%);
   background-repeat: no-repeat, no-repeat;
   background-position: right, right; }
   .super-sale__wrapper {
