@@ -369,38 +369,38 @@ a {
     .default-button__element:not(:last-child) {
       margin-right: 1.4rem; }
 
-.hero__wrapper {
-  flex-basis: 1214px;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  gap: 3rem; }
-
-.hero__heading-text {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: center;
-  font-family: "Raleway";
-  font-style: normal;
-  color: #2B3F4A; }
-
-.hero__heading {
-  font-weight: 700;
-  font-size: 3.8rem;
-  line-height: 130%; }
-
-.hero__heading-colored {
-  color: #D3A237; }
-
-.hero__subheading {
-  font-weight: 400;
-  font-size: 2.4rem;
-  line-height: 130%; }
-
-.hero .default-button {
-  max-width: 22rem;
-  justify-content: center; }
+.hero {
+  background-image: url("http://localhost:3000/src/assets/hero/hero-ornament.svg");
+  background-position: left;
+  background-origin: border-box;
+  background-repeat: no-repeat; }
+  .hero__wrapper {
+    flex-basis: 1214px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 3rem; }
+  .hero__heading-text {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    font-family: "Raleway";
+    font-style: normal;
+    color: #2B3F4A; }
+  .hero__heading {
+    font-weight: 700;
+    font-size: 3.8rem;
+    line-height: 130%; }
+  .hero__heading-colored {
+    color: #D3A237; }
+  .hero__subheading {
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 130%; }
+  .hero .default-button {
+    max-width: 22rem;
+    justify-content: center; }
 
 /******************************/
 /******************************/
@@ -415,6 +415,10 @@ a {
     font-weight: 400;
     font-size: 1.8rem;
     line-height: 100%; } }
+
+@media screen and (min-width: 2500px) {
+  .hero {
+    background-image: none; } }
 
 /********************************/
 /********************************/
@@ -445,6 +449,8 @@ a {
 /****************************/
 /****************************/
 @media (max-width: 730px) {
+  .hero {
+    background-image: none; }
   .hero__wrapper {
     flex-direction: column-reverse; }
   .hero__image {

@@ -1,6 +1,11 @@
 @import "../common/default-button";
 
 .hero {
+    background-image: url('http://localhost:3000/src/assets/hero/hero-ornament.svg');
+    background-position: left;
+    background-origin: border-box;
+background-repeat: no-repeat;
+
     &__wrapper {
         flex-basis: 1214px;
         display: flex;
@@ -67,6 +72,12 @@
     }
 }
 
+@media screen and (min-width: 2500px) {
+    .hero {
+        background-image: none;
+    }
+}
+
 /********************************/
 /********************************/
 
@@ -108,6 +119,9 @@
 /****************************/
 
 @media (max-width: 730px) {
+    .hero {
+        background-image: none;
+    }
     .hero__wrapper {
         flex-direction: column-reverse;
     }
