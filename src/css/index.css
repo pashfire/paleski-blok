@@ -187,12 +187,11 @@ a {
   .header-navigation__wrapper {
     flex-direction: column;
     justify-content: space-around;
-    max-height: 96%;
+    height: 94vh;
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
-    height: 100vh;
     transform: translateX(-100vw);
     background: linear-gradient(90deg, #faedcd 0%, #daf6ff 27.86%, #ebe6ff 53.39%, #f0d6b2 100%);
     transition: all 0.67s linear; }
@@ -438,7 +437,10 @@ a {
   .hero__subheading {
     font-weight: 400;
     font-size: 1.6rem;
-    line-height: 100%; } }
+    line-height: 100%; }
+  .default-button {
+    font-size: 1.8rem !important;
+    line-height: 1.6rem !important; } }
 
 /****************************/
 /****************************/
@@ -446,10 +448,7 @@ a {
   .hero__wrapper {
     flex-direction: column-reverse; }
   .hero__image {
-    width: 90%; }
-  .default-button {
-    font-size: 1.8rem !important;
-    line-height: 1.6rem !important; } }
+    width: 90%; } }
 
 .default-button {
   align-items: center;

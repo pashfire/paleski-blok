@@ -241,12 +241,13 @@ $anim-time: 0.8s;
     .header-navigation__wrapper {
         flex-direction: column;
         justify-content: space-around;
-        max-height: 96%;
+        //min-height: 380px;
+        //max-height: 96%;
+        height: 94vh;
         position: absolute;
         top: 0;
         right: 0;
         left: 0;
-        height: 100vh;
         transform: translateX(-100vw);
         background: linear-gradient(
             90deg,

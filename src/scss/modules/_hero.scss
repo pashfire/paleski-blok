@@ -98,6 +98,10 @@
         font-size: 1.6rem;
         line-height: 100%;
     }
+    .default-button {
+        font-size: 1.8rem !important;
+        line-height: 1.6rem !important;
+    }
 }
 
 /****************************/
@@ -110,9 +114,5 @@
 
     .hero__image {
         width: 90%;
-    }
-    .default-button {
-        font-size: 1.8rem !important;
-        line-height: 1.6rem !important;
     }
 }
