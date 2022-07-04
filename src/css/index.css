@@ -375,7 +375,7 @@ a {
       margin-right: 1.4rem; }
 
 .hero {
-  background-image: url("/src/assets/hero/hero-ornament.svg");
+  background-image: url("../../../src/assets/hero/hero-ornament.svg");
   background-position: left;
   background-origin: border-box;
   background-repeat: no-repeat; }
@@ -411,7 +411,7 @@ a {
 /******************************/
 @media (max-width: 1250px) {
   .hero {
-    background-image: url("/src/assets/hero/hero-ornament-min.svg"); }
+    background-image: url("../../../src/assets/hero/hero-ornament-min.svg"); }
   .hero__wrapper {
     flex-basis: 960px; }
   .hero__heading {
