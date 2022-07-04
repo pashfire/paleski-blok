@@ -1,7 +1,6 @@
 .header-navigation {
     background: $background-default;
-    margin-bottom: 10rem;
-
+margin-bottom: 5rem;
     &__wrapper {
         padding: 16px 0;
         flex-basis: 1214px;
@@ -136,6 +135,10 @@ $anim-time: 0.8s;
 /*START of @media (max-width: 899px)*/
 /************************************/
 @media (max-width: 899px) {
+    .header-navigation__link {
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+    }
     .burger {
         display: block;
         z-index: 999;
@@ -238,6 +241,7 @@ $anim-time: 0.8s;
     .header-navigation__wrapper {
         flex-direction: column;
         justify-content: space-around;
+        max-height: 96%;
         position: absolute;
         top: 0;
         right: 0;
