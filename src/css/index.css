@@ -13,8 +13,21 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   margin: 0; }
+
+h1 {
+  font-size: 3.6rem; }
+
+h2 {
+  font-size: 2.8rem; }
+
+h3 {
+  font-size: 2.2rem; }
+
+h4 {
+  font-size: 1.8rem; }
 
 a {
   text-decoration: none;
@@ -378,7 +391,8 @@ a {
   background-image: url("https://pashfire.github.io/paleski-blok/src/assets/hero/hero-ornament.svg");
   background-position: left;
   background-origin: border-box;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  margin-bottom: 5rem; }
   .hero__wrapper {
     flex-basis: 1214px;
     display: flex;
@@ -386,6 +400,7 @@ a {
     align-items: center;
     gap: 3rem; }
   .hero__heading-text {
+    flex-basis: 50%;
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -472,6 +487,58 @@ a {
     flex-direction: column-reverse; }
   .hero__image {
     width: 100%; } }
+
+.super-sale {
+  /*     background: no-repeat right url("https://pashfire.github.io/paleski-blok/src/assets/hero/hero-ornament.svg") linear-gradient(
+            90deg,
+            #faedcd 0%,
+            rgba(218, 246, 255, 1) 27.86%,
+            rgb(235, 230, 255) 53.39%,
+            #f0d6b2 100%
+        ); */
+  background-image: url("/src/assets/super-sale/super-sale-ornament.png"), linear-gradient(90deg, #faedcd 0%, #daf6ff 27.86%, #ebe6ff 53.39%, #f0d6b2 100%);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right, right; }
+  .super-sale__wrapper {
+    flex-basis: 1214px;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 0.8rem; }
+  .super-sale__heading {
+    display: flex;
+    justify-content: start; }
+  .super-sale__heading > h2 {
+    font-weight: 700;
+    font-size: 2.8rem;
+    line-height: 130%; }
+  .super-sale__block {
+    display: inline-flex;
+    width: 100%; }
+  .super-sale__image {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .super-sale__info {
+    padding-top: 3rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 3rem; }
+  .super-sale__prices {
+    padding-top: 3rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 3rem; }
+  .super-sale span {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 130%; }
 
 .default-button {
   align-items: center;

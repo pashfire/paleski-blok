@@ -6,6 +6,7 @@
     background-position: left;
     background-origin: border-box;
     background-repeat: no-repeat;
+    margin-bottom: 5rem;
 
     &__wrapper {
         flex-basis: 1214px;
@@ -16,6 +17,7 @@
     }
 
     &__heading-text {
+        flex-basis: 50%;
         display: flex;
         flex-direction: column;
         align-items: left;

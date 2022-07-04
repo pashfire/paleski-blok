@@ -1,0 +1,66 @@
+.super-sale {
+/*     background: no-repeat right url("https://pashfire.github.io/paleski-blok/src/assets/hero/hero-ornament.svg") linear-gradient(
+            90deg,
+            #faedcd 0%,
+            rgba(218, 246, 255, 1) 27.86%,
+            rgb(235, 230, 255) 53.39%,
+            #f0d6b2 100%
+        ); */
+
+        background-image: url("/src/assets/super-sale/super-sale-ornament.png"), linear-gradient(90deg,#faedcd 0%,rgba(218, 246, 255, 1) 27.86%,rgb(235, 230, 255) 53.39%,#f0d6b2 100%);
+        background-repeat: no-repeat, no-repeat;
+        background-position: right, right;
+        &__wrapper {
+        flex-basis: 1214px;
+        flex-direction: column;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 0.8rem;
+    }
+    &__heading {
+        display: flex;
+        justify-content: start;
+    }
+    &__heading > h2 {
+        font-weight: 700;
+        font-size: 2.8rem;
+        line-height: 130%;
+    }
+
+    &__block {
+        display: inline-flex;  
+        width: 100%;     
+    }
+
+    &__image {
+        flex: 2;
+        display: flex;
+        flex-direction: column;        
+        justify-content: center;
+    }
+
+    &__info {
+        padding-top: 3rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;        
+        justify-content: flex-start;
+        gap: 3rem;
+    }
+
+    &__prices {
+        padding-top: 3rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 3rem;
+    }
+
+    span {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 130%;
+    }
+}
