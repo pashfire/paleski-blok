@@ -1,7 +1,7 @@
 @import "../common/default-button";
 
 .hero {
-    background-image: url("../../../src/assets/hero/hero-ornament.svg");
+    background-image: url("https://pashfire.github.io/paleski-blok/src/assets/hero/hero-ornament.svg");
     
     background-position: left;
     background-origin: border-box;
@@ -58,7 +58,7 @@
 
 @media (max-width: 1250px) {
     .hero {
-        background-image: url("../../../src/assets/hero/hero-ornament-min.svg");
+        background-image: url("https://pashfire.github.io/paleski-blok/src/assets/hero/hero-ornament-min.svg");
     }
 
     .hero__wrapper {
