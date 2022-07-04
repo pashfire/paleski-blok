@@ -2,23 +2,24 @@
     &__wrapper {
         flex-basis: 1214px;
         display:flex;
-        justify-content: start;
+        justify-content: space-between;
         align-items: center;
-        gap: 3rem;
-        padding-top: 1.6rem;
+        padding-top: 0.8rem;
     }
 
     &__logo-block {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 2rem;
+        gap: 1rem;
         &:hover {
             text-decoration: none;
         }
     }
 
-    &__logo-img {}
+    &__logo-img {
+        width: 70px;
+    }
 
     &__logo-text {
         display: flex;
@@ -33,7 +34,7 @@
     &__logo-title {
         font-weight: 700;
         font-size: 2.8rem;
-        line-height: 3.3rem;
+        line-height: 2.3rem;
         text-transform: uppercase;
     }
 
@@ -47,7 +48,7 @@
     &__info-block {
         max-width: 285px;
         font-weight: 400;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         line-height: 1.9rem;
     }
 
@@ -59,16 +60,18 @@
         border-radius: 5rem;
         background-color: $input-search-background;
         padding: 0rem 2rem;
+        font-size: 1.4rem;
+
     }
 
     &__search-input {
         width: 100%;
-        height: 4rem;
+        height: 3rem;
         background: none;
         outline: none;
         border: none;
         font-weight: 400;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         line-height: 1.9rem;
         color: $primary-color1;
     }
@@ -76,14 +79,15 @@
     &__search-icon {}
 
     &__phone-block {
-        max-width: 230px;
-        height: 50px;
+        width: fit-content;
+        height: 40px;
         font-style: normal;
         font-weight: 700;
-        font-size: 2.4rem;
-        line-height: 28px;
+        font-size: 2rem;
+        line-height: 2.8rem;
         display: flex;
         align-items: center;
+        justify-content: end;
         font-feature-settings: 'pnum'on, 'lnum'on;
         text-decoration: none;
         color: $primary-color3;
@@ -112,9 +116,7 @@
     .header__logo-text {
         min-width: 210px;
     }
-    .header__phone-block {
-        min-width: 230px;
-    }
+
 
 }
 @media (max-width: 899px) {
@@ -133,6 +135,9 @@
     }
     .header__logo-text {
         display: none;
+    }
+    .header__phone-block {
+        justify-content: center;
     }
 
 }

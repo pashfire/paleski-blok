@@ -1,10 +1,10 @@
 @import "../common/default-button";
 
 .hero {
-    background-image: url('http://localhost:3000/src/assets/hero/hero-ornament.svg');
+    background-image: url("http://localhost:3000/src/assets/hero/hero-ornament.svg");
     background-position: left;
     background-origin: border-box;
-background-repeat: no-repeat;
+    background-repeat: no-repeat;
 
     &__wrapper {
         flex-basis: 1214px;
@@ -56,6 +56,10 @@ background-repeat: no-repeat;
 /******************************/
 
 @media (max-width: 1250px) {
+    .hero {
+        background-image: url("http://localhost:3000/src/assets/hero/hero-ornament-min.svg");
+    }
+    
     .hero__wrapper {
         flex-basis: 960px;
     }
@@ -128,5 +132,21 @@ background-repeat: no-repeat;
 
     .hero__image {
         width: 90%;
+    }
+}
+
+/****************************/
+/****************************/
+
+@media (max-width: 459px) {
+    .hero {
+        background-image: none;
+    }
+    .hero__wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .hero__image {
+        width: 100%;
     }
 }

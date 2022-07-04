@@ -31,18 +31,17 @@ a {
   background: white;
   margin-bottom: 5rem; }
   .header-navigation__wrapper {
-    padding: 16px 0;
-    flex-basis: 1214px;
+    flex-basis: 900px;
     display: inline-flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
-    gap: 6rem; }
+    padding: 0.8rem 0; }
   .header-navigation__link {
     position: relative;
     display: block;
     font-style: normal;
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 2.3rem;
     color: #2B3F4A;
     text-decoration: none;
@@ -221,18 +220,20 @@ a {
 .header__wrapper {
   flex-basis: 1214px;
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
-  gap: 3rem;
-  padding-top: 1.6rem; }
+  padding-top: 0.8rem; }
 
 .header__logo-block {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem; }
+  gap: 1rem; }
   .header__logo-block:hover {
     text-decoration: none; }
+
+.header__logo-img {
+  width: 70px; }
 
 .header__logo-text {
   display: flex;
@@ -246,7 +247,7 @@ a {
 .header__logo-title {
   font-weight: 700;
   font-size: 2.8rem;
-  line-height: 3.3rem;
+  line-height: 2.3rem;
   text-transform: uppercase; }
 
 .header__logo-content {
@@ -258,7 +259,7 @@ a {
 .header__info-block {
   max-width: 285px;
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.9rem; }
 
 .header__search-block {
@@ -268,28 +269,30 @@ a {
   border: 2px solid #2B3F4A;
   border-radius: 5rem;
   background-color: white;
-  padding: 0rem 2rem; }
+  padding: 0rem 2rem;
+  font-size: 1.4rem; }
 
 .header__search-input {
   width: 100%;
-  height: 4rem;
+  height: 3rem;
   background: none;
   outline: none;
   border: none;
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.9rem;
   color: #2B3F4A; }
 
 .header__phone-block {
-  max-width: 230px;
-  height: 50px;
+  width: fit-content;
+  height: 40px;
   font-style: normal;
   font-weight: 700;
-  font-size: 2.4rem;
-  line-height: 28px;
+  font-size: 2rem;
+  line-height: 2.8rem;
   display: flex;
   align-items: center;
+  justify-content: end;
   font-feature-settings: "pnum" on, "lnum" on;
   text-decoration: none;
   color: #D3A237; }
@@ -307,9 +310,7 @@ a {
     flex-basis: 90%;
     justify-content: space-between; }
   .header__logo-text {
-    min-width: 210px; }
-  .header__phone-block {
-    min-width: 230px; } }
+    min-width: 210px; } }
 
 @media (max-width: 899px) {
   .header__search-block {
@@ -321,7 +322,9 @@ a {
   .header__search-block {
     display: none; }
   .header__logo-text {
-    display: none; } }
+    display: none; }
+  .header__phone-block {
+    justify-content: center; } }
 
 @media (max-width: 459px) {
   .header__logo-img {
@@ -350,11 +353,13 @@ a {
   box-sizing: border-box;
   color: #ffffff;
   cursor: pointer;
-  padding: 0.8rem 2.4rem;
+  padding: 0.5rem 1rem;
   display: inline-flex;
+  width: fit-content;
+  justify-content: center;
   font-style: normal;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.6rem;
   line-height: 2.3rem;
   fill: white;
   transition: fill 0.5s, color 0.5s, background-color 0.5s; }
@@ -405,6 +410,8 @@ a {
 /******************************/
 /******************************/
 @media (max-width: 1250px) {
+  .hero {
+    background-image: url("http://localhost:3000/src/assets/hero/hero-ornament-min.svg"); }
   .hero__wrapper {
     flex-basis: 960px; }
   .hero__heading {
@@ -456,6 +463,16 @@ a {
   .hero__image {
     width: 90%; } }
 
+/****************************/
+/****************************/
+@media (max-width: 459px) {
+  .hero {
+    background-image: none; }
+  .hero__wrapper {
+    flex-direction: column-reverse; }
+  .hero__image {
+    width: 100%; } }
+
 .default-button {
   align-items: center;
   background-color: #D3A237;
@@ -464,11 +481,13 @@ a {
   box-sizing: border-box;
   color: #ffffff;
   cursor: pointer;
-  padding: 0.8rem 2.4rem;
+  padding: 0.5rem 1rem;
   display: inline-flex;
+  width: fit-content;
+  justify-content: center;
   font-style: normal;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.6rem;
   line-height: 2.3rem;
   fill: white;
   transition: fill 0.5s, color 0.5s, background-color 0.5s; }

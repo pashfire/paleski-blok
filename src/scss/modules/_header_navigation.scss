@@ -1,13 +1,12 @@
 .header-navigation {
     background: $background-default;
-margin-bottom: 5rem;
+    margin-bottom: 5rem;
     &__wrapper {
-        padding: 16px 0;
-        flex-basis: 1214px;
+        flex-basis: 900px;
         display: inline-flex;
-        justify-content: start;
+        justify-content: space-between;
         align-items: center;
-        gap: 6rem;
+        padding: 0.8rem 0;
     }
 
     &__element {
@@ -21,7 +20,7 @@ margin-bottom: 5rem;
         display: block;
         font-style: normal;
         font-weight: 400;
-        font-size: 2rem;
+        font-size: 1.6rem;
         line-height: 2.3rem;
         color: $primary-color1;
 
@@ -256,14 +255,13 @@ $anim-time: 0.8s;
             rgb(235, 230, 255) 53.39%,
             #f0d6b2 100%
         );
-        transition:all 0.67s linear;
-
+        transition: all 0.67s linear;
     }
 
     .nav-active {
         transform: translateX(0);
 
-        transition:all 0.67s linear;
+        transition: all 0.67s linear;
     }
     /*****END of MENU****/
 }
