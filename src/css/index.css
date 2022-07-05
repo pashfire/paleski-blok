@@ -41,7 +41,8 @@ a {
   text-decoration: none;
   color: #4456AD; }
   a:hover {
-    text-decoration: underline; }
+    text-decoration: underline;
+    cursor: pointer; }
 
 .wrapper {
   display: flex;

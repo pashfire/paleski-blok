@@ -48,6 +48,7 @@ a {
     color: $link-normal;
     &:hover {
         text-decoration: underline;
+        cursor: pointer;
     }
 }
 
