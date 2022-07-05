@@ -18,16 +18,24 @@ h4 {
   margin: 0; }
 
 h1 {
-  font-size: 3.6rem; }
+  font-size: 3.6rem;
+  line-height: 130%;
+  font-feature-settings: "pnum" on, "lnum" on; }
 
 h2 {
-  font-size: 2.8rem; }
+  font-size: 2.8rem;
+  line-height: 130%;
+  font-feature-settings: "pnum" on, "lnum" on; }
 
 h3 {
-  font-size: 2.2rem; }
+  line-height: 130%;
+  font-size: 2.2rem;
+  font-feature-settings: "pnum" on, "lnum" on; }
 
 h4 {
-  font-size: 1.8rem; }
+  font-size: 1.8rem;
+  line-height: 130%;
+  font-feature-settings: "pnum" on, "lnum" on; }
 
 a {
   text-decoration: none;
@@ -405,6 +413,7 @@ a {
     flex-direction: column;
     align-items: left;
     justify-content: center;
+    gap: 3rem;
     font-family: "Raleway";
     font-style: normal;
     color: #2B3F4A; }
@@ -489,13 +498,6 @@ a {
     width: 100%; } }
 
 .super-sale {
-  /*     background: no-repeat right url("https://pashfire.github.io/paleski-blok/src/assets/hero/hero-ornament.svg") linear-gradient(
-            90deg,
-            #faedcd 0%,
-            rgba(218, 246, 255, 1) 27.86%,
-            rgb(235, 230, 255) 53.39%,
-            #f0d6b2 100%
-        ); */
   background-image: url("https://pashfire.github.io/paleski-blok/src/assets/super-sale/super-sale-ornament.png"), linear-gradient(90deg, #faedcd 0%, #daf6ff 27.86%, #ebe6ff 53.39%, #f0d6b2 100%);
   background-repeat: no-repeat, no-repeat;
   background-position: right, right; }
@@ -512,33 +514,55 @@ a {
   .super-sale__heading > h2 {
     font-weight: 700;
     font-size: 2.8rem;
-    line-height: 130%; }
+    line-height: 130%;
+    font-feature-settings: "pnum" on, "lnum" on; }
   .super-sale__block {
-    display: inline-flex;
-    width: 100%; }
-  .super-sale__image {
-    flex: 2;
     display: flex;
-    flex-direction: column;
-    justify-content: center; }
+    width: 100%;
+    justify-content: center;
+    gap: 1.5rem; }
   .super-sale__info {
     padding-top: 3rem;
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 3rem; }
+    gap: 2rem; }
   .super-sale__prices {
     padding-top: 3rem;
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 3rem; }
+    gap: 2rem; }
+  .super-sale__prices-cost-block {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem; }
   .super-sale span {
     font-weight: 400;
-    font-size: 1.4rem;
-    line-height: 130%; }
+    font-size: 1.8rem;
+    line-height: 130%;
+    font-feature-settings: "pnum" on, "lnum" on; }
+
+@media (max-width: 1250px) {
+  .super-sale__wrapper {
+    flex-basis: 960px; } }
+
+@media (max-width: 999px) {
+  .super-sale__wrapper {
+    flex-basis: 90%; }
+  .super-sale__image {
+    max-width: 50%;
+    object-fit: contain; } }
+
+@media (max-width: 730px) {
+  .super-sale__block {
+    flex-wrap: wrap; }
+  .super-sale__image {
+    max-width: 90%;
+    object-fit: contain; } }
 
 .default-button {
   align-items: center;

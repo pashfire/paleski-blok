@@ -1,16 +1,10 @@
 .super-sale {
-/*     background: no-repeat right url("https://pashfire.github.io/paleski-blok/src/assets/hero/hero-ornament.svg") linear-gradient(
-            90deg,
-            #faedcd 0%,
-            rgba(218, 246, 255, 1) 27.86%,
-            rgb(235, 230, 255) 53.39%,
-            #f0d6b2 100%
-        ); */
+    background-image: url("https://pashfire.github.io/paleski-blok/src/assets/super-sale/super-sale-ornament.png"),
+        linear-gradient(90deg, #faedcd 0%, rgba(218, 246, 255, 1) 27.86%, rgb(235, 230, 255) 53.39%, #f0d6b2 100%);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right, right;
 
-        background-image: url("https://pashfire.github.io/paleski-blok/src/assets/super-sale/super-sale-ornament.png"), linear-gradient(90deg,#faedcd 0%,rgba(218, 246, 255, 1) 27.86%,rgb(235, 230, 255) 53.39%,#f0d6b2 100%);
-        background-repeat: no-repeat, no-repeat;
-        background-position: right, right;
-        &__wrapper {
+    &__wrapper {
         flex-basis: 1214px;
         flex-direction: column;
         display: flex;
@@ -26,27 +20,28 @@
         font-weight: 700;
         font-size: 2.8rem;
         line-height: 130%;
+        font-feature-settings: 'pnum'on, 'lnum'on;
+
     }
 
     &__block {
-        display: inline-flex;  
-        width: 100%;     
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: 1.5rem;
     }
 
     &__image {
-        flex: 2;
-        display: flex;
-        flex-direction: column;        
-        justify-content: center;
+
     }
 
     &__info {
         padding-top: 3rem;
         flex: 1;
         display: flex;
-        flex-direction: column;        
+        flex-direction: column;
         justify-content: flex-start;
-        gap: 3rem;
+        gap: 2rem;
     }
 
     &__prices {
@@ -55,12 +50,48 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        gap: 3rem;
+        gap: 2rem;
+    }
+
+    &__prices-cost-block {
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
     }
 
     span {
         font-weight: 400;
-        font-size: 1.4rem;
+        font-size: 1.8rem;
         line-height: 130%;
+        font-feature-settings: 'pnum'on, 'lnum'on;
+    }
+
+}
+
+@media (max-width: 1250px) {
+    .super-sale__wrapper {
+        flex-basis: 960px;
+    }
+}
+
+@media (max-width: 999px) {
+    .super-sale__wrapper {
+        flex-basis: 90%;
+    }
+    .super-sale__image {
+        max-width: 50%;
+        object-fit: contain;
+    }
+}
+
+@media (max-width: 730px) {
+    .super-sale__block {
+        flex-wrap: wrap;
+    }
+    .super-sale__image {
+        max-width: 90%;
+        object-fit: contain;
+
     }
 }

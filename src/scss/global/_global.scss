@@ -21,18 +21,26 @@ h4 {
 
 h1 {
     font-size: 3.6rem;
+    line-height: 130%;
+    font-feature-settings: 'pnum'on, 'lnum'on;
 }
 
 h2 {
     font-size: 2.8rem;
+    line-height: 130%;
+    font-feature-settings: 'pnum'on, 'lnum'on;
 }
 
 h3 {
+    line-height: 130%;
     font-size: 2.2rem;
+    font-feature-settings: 'pnum'on, 'lnum'on;
 }
 
 h4 {
     font-size: 1.8rem;
+    line-height: 130%;
+    font-feature-settings: 'pnum'on, 'lnum'on;
 }
 
 a {
