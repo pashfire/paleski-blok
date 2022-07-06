@@ -1,6 +1,7 @@
 @use 'sass:math';
 html {
   font-family: "Raleway";
+  font-feature-settings: "pnum" on, "lnum" on;
   font-size: 10px;
   line-height: 10px;
   color: #2B3F4A; }
@@ -19,23 +20,19 @@ h4 {
 
 h1 {
   font-size: 3.6rem;
-  line-height: 130%;
-  font-feature-settings: "pnum" on, "lnum" on; }
+  line-height: 130%; }
 
 h2 {
   font-size: 2.8rem;
-  line-height: 130%;
-  font-feature-settings: "pnum" on, "lnum" on; }
+  line-height: 130%; }
 
 h3 {
   line-height: 130%;
-  font-size: 2.2rem;
-  font-feature-settings: "pnum" on, "lnum" on; }
+  font-size: 2.2rem; }
 
 h4 {
   font-size: 1.8rem;
-  line-height: 130%;
-  font-feature-settings: "pnum" on, "lnum" on; }
+  line-height: 130%; }
 
 a {
   text-decoration: none;
@@ -315,7 +312,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: end;
-  font-feature-settings: "pnum" on, "lnum" on;
   text-decoration: none;
   color: #D3A237; }
   .header__phone-block:hover {
@@ -381,7 +377,7 @@ a {
   justify-content: center;
   font-style: normal;
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 2.3rem;
   fill: white;
   transition: fill 0.5s, color 0.5s, background-color 0.5s; }
@@ -501,7 +497,8 @@ a {
 .super-sale {
   background-image: url("https://pashfire.github.io/paleski-blok/src/assets/super-sale/super-sale-ornament.png"), linear-gradient(90deg, #faedcd 0%, #daf6ff 27.86%, #ebe6ff 53.39%, #f0d6b2 100%);
   background-repeat: no-repeat, no-repeat;
-  background-position: right, right; }
+  background-position: right, right;
+  margin-bottom: 5rem; }
   .super-sale__wrapper {
     flex-basis: 1214px;
     flex-direction: column;
@@ -515,8 +512,7 @@ a {
   .super-sale__heading > h2 {
     font-weight: 700;
     font-size: 2.8rem;
-    line-height: 130%;
-    font-feature-settings: "pnum" on, "lnum" on; }
+    line-height: 130%; }
   .super-sale__block {
     display: flex;
     width: 100%;
@@ -544,8 +540,11 @@ a {
   .super-sale span {
     font-weight: 400;
     font-size: 1.8rem;
-    line-height: 130%;
-    font-feature-settings: "pnum" on, "lnum" on; }
+    line-height: 130%; }
+
+@media screen and (min-width: 2500px) {
+  .super-sale {
+    background-image: linear-gradient(90deg, #faedcd 0%, #daf6ff 27.86%, #ebe6ff 53.39%, #f0d6b2 100%); } }
 
 @media (max-width: 1250px) {
   .super-sale__wrapper {
@@ -579,7 +578,7 @@ a {
   justify-content: center;
   font-style: normal;
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 2.3rem;
   fill: white;
   transition: fill 0.5s, color 0.5s, background-color 0.5s; }
