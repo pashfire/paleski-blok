@@ -5,8 +5,8 @@ blocks:
 1. header +
 2. header_navigation +
 3. responsive_menu +
-4. hero
-5. sale_hit
+4. hero +
+5. super-sale +
 6. categories
 7. services_hero
 8. image_gallery
