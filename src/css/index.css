@@ -563,7 +563,7 @@ a {
 
 .categories {
   margin-bottom: 5rem;
-  background-image: url("../../../src/assets/categories/categories-ornament.svg");
+  background-image: url("https://pashfire.github.io/paleski-blok/src/assets/categories/categories-ornament.svg");
   background-position: left;
   background-repeat: no-repeat; }
   .categories a {
