@@ -1,4 +1,9 @@
 .categories {
+    margin-bottom: 5rem;
+    //background-image: url("https://pashfire.github.io/paleski-blok/src/assets/hero/hero-ornament-min.svg");
+    background-image: url("../../../src/assets/categories/categories-ornament.svg");
+background-position: left;
+background-repeat: no-repeat;
     a {
         text-decoration: none;
     }
@@ -7,37 +12,37 @@
         flex-basis: 1214px;
         flex-direction: column;
         justify-content: flex-start;
+        padding: 1rem 0;
     }
 
     &__heading {
         display: flex;
         justify-content: start;
+        padding: 1rem 0;
     }
 
     &__cards-block {
         display: flex;
         width: 100%;
         justify-content: space-between;
-        gap: 1.5rem;
+        flex-wrap: nowrap;
     }
 
     &__card {
         display: flex;
         align-items: center;
         flex-direction: column;
-        //width: 50vw;
-        width: 100%;
+        width: 250px;
+        height: 280px;
         margin: auto;
-        max-width: 22em;
     }
 
     &__card:hover,
     &__card:focus {
         position: relative;
-        padding: 2rem 2rem;
         box-sizing: border-box;
 
-        $border: 5px;
+        $border: 2px;
         color: $primary-color1;
         background: $background-default;
         //background-clip: padding-box;
@@ -61,14 +66,18 @@
     }
 
     &__card-image {
+        width: 226px;
+        height: 226px;
+        object-fit:scale-down;
     }
 
     &__card-title {
         position: relative;
         display: block;
+        text-align: center;
         font-style: normal;
         font-weight: 400;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         line-height: 2.3rem;
         color: $primary-color1;
 
@@ -99,7 +108,50 @@
     }
 }
 
+@media screen and (min-width: 2500px) {
+    .categories {
+        background-image:
+        linear-gradient(90deg, #faedcd 0%, rgba(218, 246, 255, 1) 27.86%, rgb(235, 230, 255) 53.39%, #f0d6b2 100%);
+    }
+}
+
+@media (max-width: 1250px) {
+    .categories__wrapper {
+        flex-basis: 960px;
+    }
+
+    .categories__card {
+        width: 70%;
+    }
+    .categories__card-image {
+        width: 70%;
+    }
+}
+
+@media (max-width: 999px) {
+    .categories__cards-block {
+        flex-wrap: wrap;
+    }
+    .categories__wrapper {
+        flex-basis: 90%;
+    }
+    .categories__card {
+        width: 50%;
+    }
+    .categories__card-image {
+        width: 50%;
+    }
+}
+
+@media (max-width: 459px) {
+    .categories__card {
+        width: 70%;
+    }
+    .categories__card-image {
+        width: 70%;
+    }
+
+}
 
 
-/***********************************/
-/* box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px; */
+

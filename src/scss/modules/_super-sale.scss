@@ -3,6 +3,9 @@
         linear-gradient(90deg, #faedcd 0%, rgba(218, 246, 255, 1) 27.86%, rgb(235, 230, 255) 53.39%, #f0d6b2 100%);
     background-repeat: no-repeat, no-repeat;
     background-position: right, right;
+
+    padding-bottom: 2rem;
+
     margin-bottom: 5rem;
 
     &__wrapper {
@@ -79,8 +82,8 @@
         flex-basis: 90%;
     }
     .super-sale__image {
-        max-width: 50%;
-        object-fit: contain;
+        width: 100%;
+        object-fit:contain;
     }
 }
 
