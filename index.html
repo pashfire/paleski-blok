@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/css/index.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <title>Производитель блоков, бордюра, плитки Палескі Блок</title>
 </head>
 
@@ -180,7 +182,8 @@
                 <div class="services__text">
                     <h2 class="services__text-header">Рассчитаем потребность в материале и предложим оптимальное решение
                     </h2>
-                    <p class="services__text-description">расцветки, формы, раскладки, погрузки в транспорт, доставки клиенту
+                    <p class="services__text-description">расцветки, формы, раскладки, погрузки в транспорт, доставки
+                        клиенту
                         в кратчайшие сроки</p>
                     <button class="default-button">Уточнить</button>
                 </div>
@@ -189,7 +192,46 @@
     </section>
     <!--END SERVICES SECTION-->
 
-
+    <!--GALLERY SECTION-->
+    <section class="gallery wrapper">
+        <div class="gallery__wrapper">
+            <div class="gallery__heading">
+                <h2 class="gallery__heading-title">галерея</h2>
+            </div>
+            <div class="gallery__block">
+                <!--SLIDER-->
+                <div class="slider">
+                    <div class="slider__content">
+                        <div class="slider__box">
+                            <img src="https://i.ibb.co/88RPVpH/slide-1.jpg" alt="beatiful view" class="slider__image" />
+                        </div>
+                        <div class="slider__box">
+                            <img src="https://i.ibb.co/vQ5GJdN/slide-2.jpg" alt="wonderful nature"
+                                class="slider__image" />
+                        </div>
+                        <div class="slider__box">
+                            <img src="https://i.ibb.co/SVtqKcz/slide-3.png" alt="gorgeous wilderness"
+                                class="slider__image" />
+                        </div>
+                    </div>
+                    <div class="slider__button-box slider__button-box--left">
+                        <div class="slider__button slider__button--prev-button"></div>
+                    </div>
+                    <div class="slider__button-box slider__button-box--right">
+                        <div class="slider__button slider__button--next-button"></div>
+                    </div>
+                    <div class="slider__circles">
+                        <div class="slider__circle active"></div>
+                        <div class="slider__circle"></div>
+                        <div class="slider__circle"></div>
+                    </div>
+                    <p class="slider__title"></p>
+                </div>
+                <!-- END SLIDER-->
+            </div>
+        </div>
+    </section>
+    <!--END GALLERY SECTION-->
 
     <!---->
     <!---->
@@ -197,6 +239,7 @@
 
     <!--Scripts-->
     <script src="script.js"></script>
+    <script src="./src/js/slider.js"></script>
     <!--End scripts-->
 
 </body>
