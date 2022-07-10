@@ -2,8 +2,8 @@
     margin-bottom: 5rem;
     //background-image: url("https://pashfire.github.io/paleski-blok/src/assets/hero/hero-ornament-min.svg");
     background-image: url("https://pashfire.github.io/paleski-blok/src/assets/categories/categories-ornament.svg");
-background-position: left;
-background-repeat: no-repeat;
+    background-position: left;
+    background-repeat: no-repeat;
     a {
         text-decoration: none;
     }
@@ -19,6 +19,14 @@ background-repeat: no-repeat;
         display: flex;
         justify-content: start;
         padding: 1rem 0;
+    }
+
+    &__heading-title {
+        display: block;
+    }
+
+    &__heading-title::first-letter {
+        text-transform: uppercase;
     }
 
     &__cards-block {
@@ -41,34 +49,37 @@ background-repeat: no-repeat;
     &__card:focus {
         position: relative;
         box-sizing: border-box;
-
-        $border: 2px;
-        color: $primary-color1;
         background: $background-default;
-        //background-clip: padding-box;
-
-        border: solid #DDE9EA; 
-        border-image-slice: 1;
+        background-clip: padding-box;
+        border: 1px solid #dde9ea;
         border-radius: 1rem;
-
-        //box-shadow: linear-gradient(90deg, rgba(221, 233, 234, 0.6) 0% rgba(146, 247, 255, 0.41) 50.01% rgba(200, 221, 223, 0.86) 100%) -10px 20px;
+        
 
         &:before {
-            content: '';
+            content: "";
             position: absolute;
-            top: 20px; right: 10px; bottom: -20px; left: -10px;
+            top: 20px;
+            right: 10px;
+            bottom: -20px;
+            left: -10px;
             z-index: -1;
-            margin: -$border;
-            border-radius: 10px; 
-            //background: $background-gradient-secondary;
-            background: linear-gradient(90deg, rgba(221, 233, 234, 0.6) 0%, rgba(146, 247, 255, 0.41) 50.01%, rgba(200, 221, 223, 0.86) 100%);
-          }
+            margin: -2px;
+            border-radius: 1rem;
+            background: linear-gradient(
+                90deg,
+                rgba(221, 233, 234, 0.6) 0%,
+                rgba(146, 247, 255, 0.41) 50.01%,
+                rgba(200, 221, 223, 0.86) 100%
+            );
+
+
+        }
     }
 
     &__card-image {
         width: 226px;
         height: 226px;
-        object-fit:scale-down;
+        object-fit: scale-down;
     }
 
     &__card-title {
@@ -110,8 +121,13 @@ background-repeat: no-repeat;
 
 @media screen and (min-width: 2500px) {
     .categories {
-        background-image:
-        linear-gradient(90deg, #faedcd 0%, rgba(218, 246, 255, 1) 27.86%, rgb(235, 230, 255) 53.39%, #f0d6b2 100%);
+        background-image: linear-gradient(
+            90deg,
+            #faedcd 0%,
+            rgba(218, 246, 255, 1) 27.86%,
+            rgb(235, 230, 255) 53.39%,
+            #f0d6b2 100%
+        );
     }
 }
 
@@ -150,8 +166,4 @@ background-repeat: no-repeat;
     .categories__card-image {
         width: 70%;
     }
-
 }
-
-
-

@@ -21,6 +21,14 @@
         justify-content: start;
     }
 
+    &__heading-title {
+        display: block;
+    }
+
+    &__heading-title::first-letter {
+        text-transform: uppercase;
+    }
+
     &__block {
         display: flex;
         width: 100%;
