@@ -200,32 +200,47 @@
             </div>
             <div class="gallery__block">
                 <!--SLIDER-->
-                <div class="slider">
-                    <div class="slider__content">
-                        <div class="slider__box">
-                            <img src="https://i.ibb.co/88RPVpH/slide-1.jpg" alt="beatiful view" class="slider__image" />
+                <div class="carousel">
+                    <button class="carousel__button carousel__button--left hidden">
+                        <img src="./src/assets/gallery/left-button.svg" alt="left-button">
+                    </button>
+                    <div class="carousel__wrapper">
+                        <div class="carousel__track-container">
+                            <ul class="carousel__track">
+                                <li class="carousel__slide current-slide">
+                                    <img class="carousel__image" src="./src/assets/gallery/slide-1.jpg"
+                                        alt="slide-image">
+                                </li>
+                                <li class="carousel__slide">
+                                    <img class="carousel__image" src="./src/assets/gallery/slide-2.jpg"
+                                        alt="slide-image">
+                                </li>
+                                <li class="carousel__slide">
+                                    <img class="carousel__image" src="./src/assets/gallery/slide-3.jpg"
+                                        alt="slide-image">
+                                </li>
+                                <li class="carousel__slide">
+                                    <img class="carousel__image" src="./src/assets/gallery/slide-4.jpg"
+                                        alt="slide-image">
+                                </li>
+                                <li class="carousel__slide">
+                                    <img class="carousel__image" src="./src/assets/gallery/slide-5.jpg"
+                                        alt="slide-image">
+                                </li>
+                            </ul>
                         </div>
-                        <div class="slider__box">
-                            <img src="https://i.ibb.co/vQ5GJdN/slide-2.jpg" alt="wonderful nature"
-                                class="slider__image" />
-                        </div>
-                        <div class="slider__box">
-                            <img src="https://i.ibb.co/SVtqKcz/slide-3.png" alt="gorgeous wilderness"
-                                class="slider__image" />
-                        </div>
                     </div>
-                    <div class="slider__button-box slider__button-box--left">
-                        <div class="slider__button slider__button--prev-button"></div>
-                    </div>
-                    <div class="slider__button-box slider__button-box--right">
-                        <div class="slider__button slider__button--next-button"></div>
-                    </div>
-                    <div class="slider__circles">
-                        <div class="slider__circle active"></div>
-                        <div class="slider__circle"></div>
-                        <div class="slider__circle"></div>
-                    </div>
-                    <p class="slider__title"></p>
+
+                    <button class="carousel__button carousel__button--right">
+                        <img src="./src/assets/gallery/right-button.svg" alt="right-button">
+                    </button>
+                </div>
+                <div class="carousel__nav">
+                    <button class="carousel__indicator current-slide"></button>
+                    <button class="carousel__indicator"></button>
+                    <button class="carousel__indicator"></button>
+                    <button class="carousel__indicator"></button>
+                    <button class="carousel__indicator"></button>
                 </div>
                 <!-- END SLIDER-->
             </div>
