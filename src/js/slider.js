@@ -4,22 +4,19 @@ const nextButton = document.querySelector('.carousel__button--right');
 const prevButton = document.querySelector('.carousel__button--left');
 const dotsNav = document.querySelector('.carousel__nav');
 const dots = Array.from(dotsNav.children);
-const slideWidth = slides[0].getBoundingClientRect().width;
+const mql = window.matchMedia("(orientation: portrait)");
 
 // Arrange the slides next to one another
 const setSlidePosition = (slide, index) => {
-  slide.style.left = slideWidth * index + 'px';
+  slide.style.left = track.getBoundingClientRect().width * index + 'px';
 }
 
+//detects changes in the orientation of the viewport
+mql.onchange = handleOrientationChange;
 slides.forEach(setSlidePosition);
+
 // Move slide
-
 const moveToSlide = (currentSlide, targetSlide, targetDot, targetIndex) => {
-
-  console.log('currentSlide = ' + currentSlide,
-    'targetSlide = ' + targetSlide,
-    'targetDot = ' + targetDot,
-    'targetIndex = ' + targetIndex);
 
   const currentDot = dotsNav.querySelector('.current-slide');
   track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
@@ -41,10 +38,29 @@ const moveToSlide = (currentSlide, targetSlide, targetDot, targetIndex) => {
   }
 }
 
+//move to first slide
+const moveToFirstSlide = () => {
+  const currentSlide = track.querySelector('.current-slide');
+  const targetIndex = 0;
+  const targetSlide = slides[targetIndex];
+  const targetDot = dots[targetIndex];
+
+  moveToSlide(currentSlide, targetSlide, targetDot, targetIndex);
+}
+
 //when screen orientation changed
-window.onorientationchange = event => {
-  slides.forEach(setSlidePosition);
-};
+function handleOrientationChange(e) {
+  if(e.matches) // portrait orientation changed
+  {
+    slides.forEach(setSlidePosition);    
+    moveToFirstSlide();
+  }
+  else //landscape orientation changed
+  {
+    slides.forEach(setSlidePosition);
+    moveToFirstSlide();
+  }    
+}
 
 // when I click left, move slides to the left
 prevButton.addEventListener('click', e => {
@@ -59,7 +75,7 @@ prevButton.addEventListener('click', e => {
     prevButton.classlist.add('hidden');
     moveToSlide(currentSlide, prevSlide, targetDot);
   }
-})
+});
 
 // when I click right, move slides to the right
 nextButton.addEventListener('click', e => {
@@ -71,7 +87,7 @@ nextButton.addEventListener('click', e => {
   //move to the next slide
   if (slideIndex != -1)
     moveToSlide(currentSlide, nextSlide, targetDot, slideIndex);
-})
+});
 
 // when I click the nav indicators, move to that slide
 dotsNav.addEventListener('click', e => {
@@ -85,73 +101,4 @@ dotsNav.addEventListener('click', e => {
   const targetSlide = slides[targetIndex];
 
   moveToSlide(currentSlide, targetSlide, targetDot, targetIndex);
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* const sliderSize = document.querySelectorAll('.slider__box');
-const sliderContent = document.querySelector('.slider__content');
-const prevButton = document.querySelector('.slider__button-box--left');
-const nextButton = document.querySelector('.slider__button-box--right');
-const circles = document.querySelectorAll('.slider__circle');
-let count = 0;
-let slideWidth;
-countSlideWidth();
-
-window.addEventListener('resize', () => {
-  countSlideWidth();
-  changeSlide();
-})
-
-prevButton.addEventListener('click', () => {
-  count--;
-  if (count < 0) count = sliderSize.length - 1;
-  changeSlide();
-  changeCircleBackwards();
-})  
-
-nextButton.addEventListener('click', () => {
-  count++;
-  if (count >= sliderSize.length) count = 0;
-  changeSlide();
-  changeCircleForward();
-})
-
-function changeSlide() {
-  sliderContent.style.transform = `translateX(-${slideWidth * count}px)`;
-}
-
-function changeCircleForward() {
-  circles[count].classList.add('active');
-  if (count == 0) {
-    circles[circles.length - 1].classList.remove('active');
-  } else {
-    circles[count - 1].classList.remove('active');
-  }
-}
-
-function changeCircleBackwards() {
-  circles[count].classList.add('active');
-  if (count == circles.length - 1) {
-    circles[0].classList.remove('active');
-  } else {
-    circles[count + 1].classList.remove('active');
-  }
-}
-
-function countSlideWidth() {
-  slideWidth = sliderSize[0].offsetWidth;
-} */
+});
