@@ -194,14 +194,16 @@
         width: 456px;
     }
 }
-@media (min-width: 320px) and (max-width: 459px) {
+@media (min-width: 320px) and (max-width: 459px)  {
     .carousel {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
     }
-    .carousel__wrapper {
+    .gallery__block {
         flex-basis: 100%;
+    }
+    .carousel__wrapper {
         order: -9;
         height: 237px;
         width: 316px;

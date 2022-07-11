@@ -8,20 +8,27 @@ const slideWidth = slides[0].getBoundingClientRect().width;
 
 // Arrange the slides next to one another
 const setSlidePosition = (slide, index) => {
-  slide.style.left = slideWidth * index + 'px';  
+  slide.style.left = slideWidth * index + 'px';
 }
 
 slides.forEach(setSlidePosition);
 // Move slide
+
 const moveToSlide = (currentSlide, targetSlide, targetDot, targetIndex) => {
+
+  console.log('currentSlide = ' + currentSlide,
+    'targetSlide = ' + targetSlide,
+    'targetDot = ' + targetDot,
+    'targetIndex = ' + targetIndex);
+
   const currentDot = dotsNav.querySelector('.current-slide');
-  track.style.transform = 'translateX(-'+ targetSlide.style.left + ')';
+  track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
   currentSlide.classList.remove('current-slide');
   targetSlide.classList.add('current-slide');
-  
+
   currentDot.classList.remove('current-slide');
   targetDot.classList.add('current-slide');
-  
+
   if (targetIndex === 0) {
     prevButton.classList.add('hidden');
     nextButton.classList.remove('hidden');
@@ -34,15 +41,20 @@ const moveToSlide = (currentSlide, targetSlide, targetDot, targetIndex) => {
   }
 }
 
+//when screen orientation changed
+window.onorientationchange = event => {
+  slides.forEach(setSlidePosition);
+};
+
 // when I click left, move slides to the left
 prevButton.addEventListener('click', e => {
-  
+
   const currentSlide = track.querySelector('.current-slide');
   const prevSlide = currentSlide.previousElementSibling;
   const slideIndex = slides.findIndex(slide => slide === prevSlide);
   const targetDot = dots[slideIndex];
   //move to the next slide
-  moveToSlide(currentSlide, prevSlide, targetDot, slideIndex);  
+  moveToSlide(currentSlide, prevSlide, targetDot, slideIndex);
   if (prevSlide == currentSlide) {
     prevButton.classlist.add('hidden');
     moveToSlide(currentSlide, prevSlide, targetDot);
@@ -55,23 +67,23 @@ nextButton.addEventListener('click', e => {
   const nextSlide = currentSlide.nextElementSibling;
   const slideIndex = slides.findIndex(slide => slide === nextSlide);
   const targetDot = dots[slideIndex];
-  
+
   //move to the next slide
-  if (slideIndex != -1) 
+  if (slideIndex != -1)
     moveToSlide(currentSlide, nextSlide, targetDot, slideIndex);
 })
 
 // when I click the nav indicators, move to that slide
 dotsNav.addEventListener('click', e => {
-  
+
   const targetDot = e.target.closest('button');
-  
+
   if (!targetDot) return;
-  
+
   const currentSlide = track.querySelector('.current-slide');
   const targetIndex = dots.findIndex(dot => dot === targetDot);
   const targetSlide = slides[targetIndex];
-  
+
   moveToSlide(currentSlide, targetSlide, targetDot, targetIndex);
 })
 
