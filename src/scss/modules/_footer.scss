@@ -1,0 +1,82 @@
+.footer {
+    background-image: url("/src/assets/footer/footer-ornament.png"),
+        linear-gradient(to right, $primary-color1, $primary-color1);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, right;
+    z-index: -8;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        flex-basis: 1214px;
+        //justify-content: space-between;
+        min-height: 160px;
+        padding: 4rem 0;
+        //background-color: $primary-color1;
+    }
+
+    .footer-column {
+        flex-direction: column;
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            color: white;
+            flex-basis: 100%;
+            align-items: flex-end;
+        }
+
+        &__wrapper:last-child {
+            flex-basis: 190px;
+
+        }
+        &__wrapper:nth-child(2) {
+            align-items:center;
+        }
+        &__wrapper:nth-child(3) {
+            align-items:center;
+        }
+
+        &__logo {
+            width: 88px;
+            height: 88px;
+            object-fit: scale-down;
+            flex-basis: 100px;
+            position: relative;
+            box-sizing: border-box;
+            background: $background-default;
+            border: 1px solid $primary-color2;
+            border-radius: 1rem;
+            box-shadow: $primary-color2 -5px 10px;
+        }
+
+        &__title {
+            display: block;
+        }
+
+        &__title::first-letter {
+            text-transform: uppercase;
+        }
+
+        &__info {
+            font-size: 1.8rem;
+            line-height: 2.5rem;
+
+        }
+
+        &__info-item {
+        }
+
+        &__info-item > h2 {
+        }
+
+        &__info-item > span {
+        }
+
+        &__info-item > img {
+        }
+    }
+}
+
+/**************************************/
