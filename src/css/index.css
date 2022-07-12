@@ -782,6 +782,7 @@ a {
   position: relative;
   height: 100%;
   width: 100%;
+  box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.2);
   overflow: hidden; }
 
 .carousel__track {
@@ -810,6 +811,10 @@ a {
   border: 0;
   cursor: pointer; }
 
+.carousel__button > img {
+  box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.2);
+  border-radius: 50%; }
+
 .carousel__nav {
   display: flex;
   justify-content: center;
@@ -822,22 +827,24 @@ a {
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.3);
   margin: 0 12px;
-  cursor: pointer; }
+  cursor: pointer;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.4); }
 
 .current-slide {
-  background: rgba(0, 0, 0, 0.75); }
+  background: rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.2); }
 
 .hidden {
   visibility: hidden; }
 
-@media (orientation: portrait) and (max-width: 1250px), (orientation: landscape) and (max-width: 1250px) {
+@media screen and (max-width: 1250px), (orientation: portrait) and (max-width: 1250px), (orientation: landscape) and (max-width: 1250px) {
   .gallery__wrapper {
     flex-basis: 960px; }
   .carousel__wrapper {
     height: 570px;
     width: 760px; } }
 
-@media (orientation: portrait) and (max-width: 999px), (orientation: landscape) and (max-width: 999px) {
+@media screen and (max-width: 999px), (orientation: portrait) and (max-width: 999px), (orientation: landscape) and (max-width: 999px) {
   .gallery__wrapper {
     flex-basis: 90%; }
   .carousel {
@@ -849,14 +856,14 @@ a {
     width: 40px;
     height: 40px; } }
 
-@media (orientation: portrait) and (max-width: 730px), (orientation: landscape) and (max-width: 730px) {
+@media screen and (max-width: 730px), (orientation: portrait) and (max-width: 730px), (orientation: landscape) and (max-width: 730px) {
   .gallery {
     background-image: linear-gradient(90deg, #faedcd 0%, #daf6ff 27.86%, #ebe6ff 53.39%, #f0d6b2 100%); }
   .carousel__wrapper {
     height: 342px;
     width: 456px; } }
 
-@media (orientation: portrait) and (min-width: 460px) and (max-width: 660px), (orientation: landscape) and (min-width: 460px) and (max-width: 660px) {
+@media screen and (min-width: 460px) and (max-width: 660px), (orientation: portrait) and (min-width: 460px) and (max-width: 660px), (orientation: landscape) and (min-width: 460px) and (max-width: 660px) {
   .carousel {
     display: flex;
     flex-direction: row;
@@ -870,7 +877,7 @@ a {
     height: 342px;
     width: 456px; } }
 
-@media (orientation: portrait) and (min-width: 320px) and (max-width: 459px), (orientation: landscape) and (min-width: 320px) and (max-width: 459px) {
+@media screen and (min-width: 320px) and (max-width: 459px), (orientation: portrait) and (min-width: 320px) and (max-width: 459px), (orientation: landscape) and (min-width: 320px) and (max-width: 459px) {
   .carousel {
     display: flex;
     flex-direction: row;
@@ -885,6 +892,75 @@ a {
     order: -9;
     height: 237px;
     width: 316px; } }
+
+.region-service {
+  padding-bottom: 2rem;
+  margin-bottom: 5rem; }
+  .region-service__wrapper {
+    flex-basis: 1214px;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 0.8rem;
+    gap: 2rem; }
+  .region-service__heading {
+    display: flex;
+    justify-content: start; }
+  .region-service__heading-title {
+    display: block; }
+  .region-service__heading-title::first-letter {
+    text-transform: uppercase; }
+  .region-service__block {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 6rem; }
+  .region-service__image {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .region-service__image > iframe {
+    position: relative;
+    box-sizing: border-box;
+    background: white;
+    background-clip: padding-box;
+    border: 1px solid #DDE9EA;
+    border-radius: 1rem;
+    box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.2); }
+  .region-service__text {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    gap: 1rem;
+    font-family: "Raleway";
+    font-style: normal;
+    color: #2B3F4A; }
+
+@media (max-width: 1250px) {
+  .region-service__wrapper {
+    flex-basis: 960px; } }
+
+@media (max-width: 999px) {
+  .region-service__wrapper {
+    flex-basis: 90%;
+    justify-content: space-between; }
+  .region-service__block {
+    gap: 1.6rem; }
+  .region-service__text-header {
+    font-size: 2.4rem; }
+  .region-service__text-description {
+    font-size: 1.6rem; }
+  .region-service__image {
+    width: 100%; } }
+
+@media (max-width: 730px) {
+  .region-service__block {
+    flex-direction: column-reverse; }
+  .region-service__image > iframe {
+    width: 100%; } }
 
 .default-button {
   align-items: center;

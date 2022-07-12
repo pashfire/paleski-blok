@@ -1,4 +1,4 @@
-.services {
+.region-service {
     padding-bottom: 2rem;
     margin-bottom: 5rem;
 
@@ -37,13 +37,23 @@
         align-items: center;
     }
 
+    &__image > iframe {
+        position: relative;
+        box-sizing: border-box;
+        background: $background-default;
+        background-clip: padding-box;
+        border: 1px solid $primary-color2;
+        border-radius: 1rem;      
+        box-shadow: 0 0 2em 0 rgba(0, 0, 0, .2);  
+    }
+
     &__text {
         flex-basis: 50%;
         display: flex;
         flex-direction: column;
         align-items: left;
         justify-content: center;
-        gap: 3rem;
+        gap: 1rem;
         font-family: "Raleway";
         font-style: normal;
         color: $primary-color1;
@@ -54,28 +64,43 @@
 }
 
 @media (max-width: 1250px) {
-    .services__wrapper {
+    .region-service__wrapper {
         flex-basis: 960px;
     }
 }
 
 @media (max-width: 999px) {
-    .services__wrapper {
+    .region-service__wrapper {
         flex-basis: 90%;
         justify-content: space-between;
     }
 
-    .services__image {
+    .region-service__block {
+        gap: 1.6rem;
+    }
+    .region-service__text-header {
+        font-size: 2.4rem;
+    }
+
+    .region-service__text-description {
+        font-size: 1.6rem;
+    }
+
+    .region-service__image {
         width: 100%;
     }
 }
 
 @media (max-width: 730px) {
-    .services__block {
-        flex-direction: column;
+    .region-service__block {
+        flex-direction: column-reverse;
     }
 
-    .services__image {
-        width: 90%;
+    .region-service__image {
+        //width: 90%;
+    }
+
+    .region-service__image > iframe {
+        width: 100%;
     }
 }
