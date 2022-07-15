@@ -731,7 +731,7 @@ a {
     width: 90%; } }
 
 .gallery {
-  background-image: url("../../../src/assets/gallery/gallery-ornament.png"), linear-gradient(90deg, #faedcd 0%, #daf6ff 27.86%, #ebe6ff 53.39%, #f0d6b2 100%);
+  background-image: url("https://pashfire.github.io/paleski-blok/src/assets/gallery/gallery-ornament.png"), linear-gradient(90deg, #faedcd 0%, #daf6ff 27.86%, #ebe6ff 53.39%, #f0d6b2 100%);
   background-repeat: no-repeat, no-repeat;
   background-position: left, left;
   padding-bottom: 2rem;
@@ -957,7 +957,7 @@ a {
     width: 100%; } }
 
 .footer {
-  background-image: url("/src/assets/footer/footer-ornament.png"), linear-gradient(to right, #2B3F4A, #2B3F4A);
+  background-image: url("https://pashfire.github.io/paleski-blok/src/assets/footer/footer-ornament.png"), linear-gradient(to right, #2B3F4A, #2B3F4A);
   background-repeat: no-repeat, no-repeat;
   background-position: bottom right, right;
   z-index: -8; }
