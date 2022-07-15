@@ -37,43 +37,39 @@
     }
 
     &__card {
+        position: relative;
+        z-index: 3;
+        background: none;
         display: flex;
         align-items: center;
         flex-direction: column;
         width: 250px;
         height: 280px;
         margin: auto;
+        transition: all 0.3s ease-in-out;
     }
-
-    &__card:hover,
-    &__card:focus {
-        position: relative;
-        box-sizing: border-box;
-        background: $background-default;
-        background-clip: padding-box;
-        border: 1px solid #dde9ea;
+    
+    &__card::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 250px;
+        height: 280px;
+        opacity: 0;
+        border: 1px solid $primary-color2;
+        background-color: white;
         border-radius: 1rem;
-        
-
-        &:before {
-            content: "";
-            position: absolute;
-            top: 20px;
-            right: 10px;
-            bottom: -20px;
-            left: -10px;
-            z-index: -1;
-            margin: -2px;
-            border-radius: 1rem;
-            background: linear-gradient(
-                90deg,
-                rgba(221, 233, 234, 0.6) 0%,
-                rgba(146, 247, 255, 0.41) 50.01%,
-                rgba(200, 221, 223, 0.86) 100%
-            );
-
-
-        }
+        box-shadow: $primary-color2 -5px 10px;
+        transition: opacity 0.3s ease-in-out;
+    }
+    
+    &__card:hover,
+    &__card:focus {    
+    }
+    
+    &__card:hover::after,
+    &__card:focus::after {
+        opacity: 0.7;
     }
 
     &__card-image {
@@ -121,13 +117,7 @@
 
 @media screen and (min-width: 2500px) {
     .categories {
-        background-image: linear-gradient(
-            90deg,
-            #faedcd 0%,
-            rgba(218, 246, 255, 1) 27.86%,
-            rgb(235, 230, 255) 53.39%,
-            #f0d6b2 100%
-        );
+        background-image: none;
     }
 }
 
@@ -136,9 +126,6 @@
         flex-basis: 960px;
     }
 
-    .categories__card {
-        width: 70%;
-    }
     .categories__card-image {
         width: 70%;
     }
@@ -151,18 +138,14 @@
     .categories__wrapper {
         flex-basis: 90%;
     }
-    .categories__card {
-        width: 50%;
-    }
+
     .categories__card-image {
         width: 50%;
     }
 }
 
 @media (max-width: 459px) {
-    .categories__card {
-        width: 70%;
-    }
+
     .categories__card-image {
         width: 70%;
     }
