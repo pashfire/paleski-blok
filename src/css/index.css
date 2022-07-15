@@ -822,10 +822,10 @@ a {
   background: rgba(0, 0, 0, 0.3);
   margin: 0 12px;
   cursor: pointer;
-  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.4); }
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2); }
 
 .current-slide {
-  background: rgba(0, 0, 0, 0.75);
+  background: #D3A237;
   box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.2); }
 
 .hidden {
