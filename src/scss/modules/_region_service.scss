@@ -44,7 +44,7 @@
         background-clip: padding-box;
         border: 1px solid $primary-color2;
         border-radius: 1rem;      
-        box-shadow: 0 0 2em 0 rgba(0, 0, 0, .2);  
+        box-shadow: $primary-color2 -10px 20px;  
     }
 
     &__text {

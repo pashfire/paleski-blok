@@ -45,7 +45,6 @@
         flex-direction: column;
         width: 250px;
         height: 280px;
-        margin: auto;
         transition: all 0.3s ease-in-out;
     }
     
@@ -59,12 +58,27 @@
         border: 1px solid $primary-color2;
         background-color: white;
         border-radius: 1rem;
-        box-shadow: $primary-color2 -5px 10px;
+        box-shadow: $primary-color2 -10px 20px;  
         transition: opacity 0.3s ease-in-out;
     }
     
     &__card:hover,
-    &__card:focus {    
+    &__card:focus {   
+        .categories__card-title {
+            text-decoration: none;
+        }
+
+        .categories__card-title::after {
+            background: $primary-color2;
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .categories__card-title {
+            color: $primary-color3;
+            transition: all 0.3s ease-in-out;
+        }
+
     }
     
     &__card:hover::after,
@@ -95,23 +109,24 @@
             position: absolute;
             content: "";
             top: 100%;
+            margin-top: 5px;
             left: 0;
             width: 100%;
-            height: 3px;
-            background: $primary-color3;
+            height: 5px;
+            background: $primary-color2;
             transform: scaleX(0);
             transform-origin: right;
             transition: transform 0.5s;
         }
 
-        &:hover {
-            text-decoration: none;
-        }
+        // &:hover {
+        //     text-decoration: none;
+        // }
 
-        &:hover::after {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
+        // &:hover::after {
+        //     transform: scaleX(1);
+        //     transform-origin: left;
+        // }
     }
 }
 

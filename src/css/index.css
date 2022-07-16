@@ -604,7 +604,6 @@ a {
     flex-direction: column;
     width: 250px;
     height: 280px;
-    margin: auto;
     transition: all 0.3s ease-in-out; }
   .categories__card::after {
     content: "";
@@ -616,8 +615,17 @@ a {
     border: 1px solid #DDE9EA;
     background-color: white;
     border-radius: 1rem;
-    box-shadow: #DDE9EA -5px 10px;
+    box-shadow: #DDE9EA -10px 20px;
     transition: opacity 0.3s ease-in-out; }
+  .categories__card:hover .categories__card-title, .categories__card:focus .categories__card-title {
+    text-decoration: none; }
+  .categories__card:hover .categories__card-title::after, .categories__card:focus .categories__card-title::after {
+    background: #DDE9EA;
+    transform: scaleX(1);
+    transform-origin: left; }
+  .categories__card:hover .categories__card-title, .categories__card:focus .categories__card-title {
+    color: #D3A237;
+    transition: all 0.3s ease-in-out; }
   .categories__card:hover::after, .categories__card:focus::after {
     opacity: 0.7; }
   .categories__card-image {
@@ -640,18 +648,14 @@ a {
       position: absolute;
       content: "";
       top: 100%;
+      margin-top: 5px;
       left: 0;
       width: 100%;
-      height: 3px;
-      background: #D3A237;
+      height: 5px;
+      background: #DDE9EA;
       transform: scaleX(0);
       transform-origin: right;
       transition: transform 0.5s; }
-    .categories__card-title:hover {
-      text-decoration: none; }
-    .categories__card-title:hover::after {
-      transform: scaleX(1);
-      transform-origin: left; }
 
 @media screen and (min-width: 2500px) {
   .categories {
@@ -921,7 +925,7 @@ a {
     background-clip: padding-box;
     border: 1px solid #DDE9EA;
     border-radius: 1rem;
-    box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.2); }
+    box-shadow: #DDE9EA -10px 20px; }
   .region-service__text {
     flex-basis: 50%;
     display: flex;
@@ -1063,6 +1067,99 @@ a {
   background-color: #fff;
   transition: all 0.3s ease-in-out; }
 
+.month-offer {
+  margin-bottom: 5rem; }
+  .month-offer p {
+    padding: 0;
+    margin: 0;
+    font-size: 1.4rem; }
+  .month-offer__wrapper {
+    display: flex;
+    flex-basis: 1214px;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem 0; }
+  .month-offer__heading {
+    display: flex;
+    justify-content: start;
+    padding: 1rem 0; }
+  .month-offer__heading-title {
+    display: block; }
+  .month-offer__heading-title::first-letter {
+    text-transform: uppercase; }
+  .month-offer__cards-block {
+    padding-top: 3rem;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 3rem;
+    flex-wrap: nowrap; }
+  .month-offer__card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 2rem;
+    gap: 2rem; }
+  .month-offer__card-image img {
+    position: relative;
+    z-index: 3;
+    width: 191px;
+    height: 278px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 1rem;
+    transition: box-shadow 0.3s ease-in-out; }
+  .month-offer__card:hover .month-offer__card-image img {
+    border: 1px solid #DDE9EA;
+    margin: -1px;
+    border-radius: 1rem;
+    box-shadow: #DDE9EA -10px 20px; }
+  .month-offer__card:hover .month-offer__card-info-title > h4 {
+    transition: color 0.3s ease-in-out;
+    color: #D3A237; }
+  .month-offer__card:hover .month-offer__card-info-subtitle {
+    transition: color 0.3s ease-in-out;
+    color: #2B3F4A; }
+  .month-offer__card-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+  .month-offer__card-info-title > h4 {
+    color: #2B3F4A;
+    transition: color 0.3s ease-in-out; }
+  .month-offer__card-info-title:hover {
+    text-decoration: none; }
+  .month-offer__card-info-subtitle {
+    color: #D3A237;
+    transition: color 0.3s ease-in-out; }
+  .month-offer__card-info-subtitle:hover {
+    text-decoration: none; }
+  .month-offer__card-info-cost-block {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem; }
+  .month-offer span {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 130%; }
+  .month-offer__card-info-element:not(:first-child) {
+    margin-top: 1rem; }
+
+@media (max-width: 1250px) {
+  .month-offer__wrapper {
+    flex-basis: 960px; }
+  .month-offer__card {
+    flex: 1 1;
+    max-height: 298px; }
+  .month-offer__cards-block {
+    flex-wrap: wrap; } }
+
+/********************************/
 .default-button {
   align-items: center;
   background-color: #D3A237;
