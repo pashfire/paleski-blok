@@ -118,15 +118,6 @@
             transform-origin: right;
             transition: transform 0.5s;
         }
-
-        // &:hover {
-        //     text-decoration: none;
-        // }
-
-        // &:hover::after {
-        //     transform: scaleX(1);
-        //     transform-origin: left;
-        // }
     }
 }
 
@@ -149,6 +140,8 @@
 @media (max-width: 999px) {
     .categories__cards-block {
         flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
     }
     .categories__wrapper {
         flex-basis: 90%;
@@ -159,9 +152,16 @@
     }
 }
 
+@media (max-width: 730px) {
+    .categories__card-image {
+        width: 50%;
+    }
+
+}
+
 @media (max-width: 459px) {
 
     .categories__card-image {
-        width: 70%;
+        width: 40%;
     }
 }

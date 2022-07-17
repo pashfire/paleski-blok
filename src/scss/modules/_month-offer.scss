@@ -43,24 +43,12 @@
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        width: 100%;
-        height: 100%;
+
         margin-bottom: 2rem;
-        gap: 2rem;
+        gap: 3rem;
     }
 
-    // &__card:hover {
-    //     .month-offer__card-image > img {
-    //         box-shadow: $primary-color2 -10px 20px;
-    //         transition: box-shadow 0.3s ease-in-out;
-    //     }
-    // }
-
     &__card-image img {
-        position: relative;
-        z-index: 3;
-        width: 191px;
-        height: 278px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -77,12 +65,12 @@
             box-shadow: $primary-color2 -10px 20px;
         }
         .month-offer__card-info-title > h4 {
-        transition: color 0.3s ease-in-out;
+            transition: color 0.3s ease-in-out;
 
             color: $primary-color3;
         }
         .month-offer__card-info-subtitle {
-        transition: color 0.3s ease-in-out;
+            transition: color 0.3s ease-in-out;
 
             color: $primary-color1;
         }
@@ -98,7 +86,6 @@
     &__card-info-title > h4 {
         color: $primary-color1;
         transition: color 0.3s ease-in-out;
-
     }
 
     &__card-info-title:hover {
@@ -108,7 +95,6 @@
     &__card-info-subtitle {
         color: $primary-color3;
         transition: color 0.3s ease-in-out;
-
     }
 
     &__card-info-subtitle:hover {
@@ -140,7 +126,6 @@
 
     .month-offer__card {
         flex: 1 1;
-        max-height: 298px;
     }
 
     .month-offer__cards-block {
@@ -148,31 +133,35 @@
     }
 }
 
-/********************************/
-// &__card-image img {
-//     position: relative;
-//     z-index: 3;
-//     width: 191px;
-//     height: 278px;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: flex-start;
-//     transition: all 0.3s ease-in-out;
-// }
+@media (max-width: 999px) {
+    .month-offer__wrapper {
+        flex-basis: 90%;
+    }
+}
 
-// &__card-image img::before {
-//     content: "";
-//     position: absolute;
-//     width: 191px;
-//     height: 278px;
-//     opacity: 1;
-//     z-index: 1110;
-//     border-radius: 1rem;
-//     box-shadow: $primary-color2 -10px 20px;
-//     transition: opacity 0.3s ease-in-out;
-// }
+@media (max-width: 730px) {
+    .month-offer__cards-block {
+        flex-basis: 90%;
+    }
+    .month-offer__card-image {
+    }
+    .month-offer__card-info {
+    }
+}
 
-// &__card-image img:hover::after,
-// &__card-image img:focus::after {
-//     opacity: 0.7;
-// }
+@media (max-width: 411px) {
+    .month-offer__card {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .month-offer__card-info {
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .month-offer__cards-block {
+        height: 100%;
+    }
+}
