@@ -115,7 +115,6 @@
     }
 
     &__card-info-element:not(:first-child) {
-        margin-top: 1rem;
     }
 }
 
@@ -149,16 +148,17 @@
     }
 }
 
-@media (max-width: 411px) {
+@media (max-width: 389px) {
     .month-offer__card {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 2rem;
     }
 
     .month-offer__card-info {
         justify-content: center;
         align-items: center;
-        gap: 1rem;
+        gap: 2rem;
     }
 
     .month-offer__cards-block {

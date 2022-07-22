@@ -51,8 +51,7 @@ a {
   justify-content: center; }
 
 .header-navigation {
-  border-top: 1px solid #DDE9EA;
-  border-bottom: 1px solid #DDE9EA;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   margin-bottom: 5rem; }
   .header-navigation__wrapper {
     flex-basis: 1214px;
@@ -138,8 +137,7 @@ a {
 @media (max-width: 999px) {
   .header-navigation__wrapper {
     flex-basis: 90%;
-    justify-content: space-between;
-    gap: 4rem; } }
+    justify-content: space-between; } }
 
 /************************************/
 /* END of @media (max-width: 999px) */
@@ -224,8 +222,9 @@ a {
     top: 0;
     right: 0;
     left: 0;
+    gap: 0;
     transform: translateX(-100vw);
-    background: linear-gradient(90deg, #faedcd 0%, #daf6ff 27.86%, #ebe6ff 53.39%, #f0d6b2 100%);
+    background-image: linear-gradient(90deg, #ffffff 5%, #d7d9da 100%);
     transition: all 0.67s linear; }
   .header-navigation__element:last-child {
     margin: 0; }
@@ -1163,8 +1162,6 @@ a {
     font-weight: 400;
     font-size: 1.8rem;
     line-height: 130%; }
-  .month-offer__card-info-element:not(:first-child) {
-    margin-top: 1rem; }
 
 @media (max-width: 1250px) {
   .month-offer__wrapper {
@@ -1182,14 +1179,15 @@ a {
   .month-offer__cards-block {
     flex-basis: 90%; } }
 
-@media (max-width: 411px) {
+@media (max-width: 389px) {
   .month-offer__card {
     flex-wrap: wrap;
-    justify-content: center; }
+    justify-content: center;
+    gap: 2rem; }
   .month-offer__card-info {
     justify-content: center;
     align-items: center;
-    gap: 1rem; }
+    gap: 2rem; }
   .month-offer__cards-block {
     height: 100%; } }
 
