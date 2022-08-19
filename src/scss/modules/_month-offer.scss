@@ -22,6 +22,12 @@
         padding: 1rem 0;
     }
 
+    &__footer {
+        display: flex;
+        justify-content: start;
+        padding: 2rem 0;
+    }
+
     &__heading-title {
         display: block;
     }
@@ -41,43 +47,62 @@
 
     &__card {
         display: flex;
+        flex: 0 1 calc(33%-2rem);
         flex-direction: row;
         flex-wrap: nowrap;
-
         margin-bottom: 2rem;
         gap: 1rem;
+        border: 1px solid $primary-color2;
+        padding: 10px;
+        border-radius: 1rem;
+        cursor: pointer;
+        transition: all 0.3s linear;
     }
 
+  
     &__card-image img {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        position: relative;
+        z-index: 3;
+        background: white;
+        display: block;
+        min-width: 100%;
+        min-height: 100%;
         border-radius: 1rem;
+    }
 
-        transition: box-shadow 0.3s ease-in-out;
+    &__card-image img:hover::after {
+        content: "";
+        position: absolute;
+        z-index: -2;
+        min-width: 100%;
+        min-height: 100%;
+        opacity: 0;
+        border-radius: 5px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
 
     &__card:hover {
-        .month-offer__card-image img {
-            border: 1px solid $primary-color2;
-            margin: -1px;
-            border-radius: 1rem;
-            box-shadow: $primary-color2 -10px 20px;
+        background-color: $primary-color2;
+        
+        transition: all 0.3s;
+        
+        .month-offer__card-image > img::after {
+            opacity: 1;
         }
         .month-offer__card-info-title > h4 {
-            transition: color 0.3s ease-in-out;
+            transition: color 0.3s linear;
 
             color: $primary-color3;
         }
         .month-offer__card-info-subtitle {
-            transition: color 0.3s ease-in-out;
+            transition: color 0.3s linear;
 
             color: $primary-color1;
         }
     }
 
     &__card-info {
-        flex: 1;
+        flex: 0 1 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -123,9 +148,9 @@
         flex-basis: 960px;
     }
 
-    .month-offer__card {
-        flex: 1 1;
-    }
+    // .month-offer__card {
+    //     flex: 1 1;
+    // }
 
     .month-offer__cards-block {
         flex-wrap: wrap;
@@ -136,12 +161,15 @@
     .month-offer__wrapper {
         flex-basis: 90%;
     }
+    .month-offer__cards-block {
+        flex-basis: 90%;
+        justify-content: center;
+        gap: 2rem;
+    }
 }
 
 @media (max-width: 730px) {
-    .month-offer__cards-block {
-        flex-basis: 90%;
-    }
+    
     .month-offer__card-image {
     }
     .month-offer__card-info {
