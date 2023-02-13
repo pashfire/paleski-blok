@@ -1,0 +1,196 @@
+.catalog-categories {
+    margin-bottom: 5rem;
+    background-image: url("https://pashfire.github.io/paleski-blok/src/assets/hero/hero-ornament.svg");
+    //background-image: url("https://pashfire.github.io/paleski-blok/src/assets/categories/categories-ornament.svg");
+    background-position: left;
+    background-repeat: no-repeat;
+    a {
+        text-decoration: none;
+    }
+    &__wrapper {
+        display: flex;
+        flex-basis: 1214px;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 1rem 0;
+    }
+
+    &__heading {
+        display: flex;
+        justify-content: start;
+        padding: 1rem 0;
+    }
+
+    &__heading-title {
+        display: block;
+    }
+
+    &__heading-title::first-letter {
+        text-transform: uppercase;
+    }
+
+    &__breadcrumbs {
+    }
+
+    &__breadcrumbs-list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0;
+        list-style: none;
+        color: $primary-color1;
+        text-decoration: none;
+        text-transform: capitalize;
+    }
+
+    &__breadcrumbs-list-item {
+        display: inline;
+        font-size: 1.8rem;
+        color: #828282;
+    }
+    &__breadcrumbs-list-item:first-child {
+        padding-right: 0.6rem;
+        color: $primary-color1;
+    }
+    &__breadcrumbs-list-item:not(:first-child)::before {
+        padding: 0.6rem;
+        color: #76421A;
+        content: "/\00a0";
+    }
+
+    &__cards-block {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    &__card {
+        position: relative;
+        z-index: 3;
+        background: none;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 250px;
+        height: 280px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &__card::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 250px;
+        height: 280px;
+        opacity: 0;
+        border: 1px solid $primary-color2;
+        background-color: white;
+        border-radius: 1rem;
+        box-shadow: $primary-color2 -10px 20px;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    &__card:hover,
+    &__card:focus {
+        .catalog-categories__card-title {
+            text-decoration: none;
+        }
+
+        .catalog-categories__card-title::after {
+            background: $primary-color2;
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .catalog-categories__card-title {
+            color: $primary-color3;
+            transition: all 0.3s ease-in-out;
+        }
+
+    }
+
+    &__card:hover::after,
+    &__card:focus::after {
+        opacity: 0.7;
+    }
+
+    &__card-image {
+        width: 226px;
+        height: 226px;
+        object-fit: scale-down;
+    }
+
+    &__card-title {
+        position: relative;
+        display: block;
+        text-align: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+        color: $primary-color1;
+
+        text-decoration: none;
+        text-transform: capitalize;
+        transition: 0.5s;
+        &::after {
+            position: absolute;
+            content: "";
+            top: 100%;
+            margin-top: 5px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: $primary-color2;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.5s;
+        }
+    }
+}
+
+@media screen and (min-width: 2500px) {
+    .catalog-categories {
+        background-image: none;
+    }
+}
+
+@media (max-width: 1250px) {
+    .catalog-categories__wrapper {
+        flex-basis: 960px;
+    }
+
+    .catalog-categories__card-image {
+        width: 70%;
+    }
+}
+
+@media (max-width: 999px) {
+    .catalog-categories__cards-block {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .catalog-categories__wrapper {
+        flex-basis: 90%;
+    }
+
+    .catalog-categories__card-image {
+        width: 50%;
+    }
+}
+
+@media (max-width: 730px) {
+    .catalog-categories__card-image {
+        width: 50%;
+    }
+
+}
+
+@media (max-width: 459px) {
+
+    .catalog-categories__card-image {
+        width: 40%;
+    }
+}

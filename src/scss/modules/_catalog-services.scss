@@ -1,0 +1,86 @@
+.catalog-services {
+    background-image: url("https://pashfire.github.io/paleski-blok/src/assets/gallery/gallery-ornament.png"),
+        linear-gradient(90deg, #faedcd 0%, rgba(218, 246, 255, 1) 27.86%, rgb(235, 230, 255) 53.39%, #f0d6b2 100%);
+    background-repeat: no-repeat, no-repeat;
+    background-position: left, left;
+
+    padding-bottom: 2rem;
+
+    margin-bottom: 5rem;
+
+    &__wrapper {
+        flex-basis: 1214px;
+        flex-direction: column;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 2rem;
+        gap: 2rem;
+    }
+    &__heading {
+        display: flex;
+        justify-content: start;
+    }
+
+    &__heading-title {
+        display: block;
+    }
+
+    &__heading-title::first-letter {
+        text-transform: uppercase;
+    }
+
+    &__block {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: 6rem;
+    }
+
+    &__image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__text {
+        flex-basis: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        font-family: "Raleway";
+        font-style: normal;
+        color: $primary-color1;
+    }
+
+    &__text-header {
+    }
+}
+
+@media (max-width: 1250px) {
+    .catalog-services__wrapper {
+        flex-basis: 960px;
+    }
+}
+
+@media (max-width: 999px) {
+    .catalog-services__wrapper {
+        flex-basis: 90%;
+        justify-content: space-between;
+    }
+
+    .catalog-services__image {
+        width: 100%;
+    }
+}
+
+@media (max-width: 730px) {
+    .catalog-services__block {
+        flex-direction: column;
+    }
+
+    .catalog-services__image {
+        width: 90%;
+    }
+}
