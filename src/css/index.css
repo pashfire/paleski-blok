@@ -605,6 +605,28 @@ a {
     display: block; }
   .categories__heading-title::first-letter {
     text-transform: uppercase; }
+  .categories__breadcrumbs {
+    margin-bottom: 2rem; }
+  .categories__breadcrumbs-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    list-style: none;
+    color: #2B3F4A;
+    text-decoration: none;
+    text-transform: capitalize; }
+  .categories__breadcrumbs-list-item {
+    display: inline;
+    font-size: 1.8rem;
+    color: #828282; }
+  .categories__breadcrumbs-list-item:first-child {
+    padding-right: 0.6rem;
+    color: #2B3F4A; }
+  .categories__breadcrumbs-list-item:not(:first-child)::before {
+    padding: 0.6rem;
+    color: #76421A;
+    content: "/\00a0"; }
   .categories__cards-block {
     display: flex;
     width: 100%;
