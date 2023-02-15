@@ -91,6 +91,7 @@
     <!--CATEGORIES SECTION-->
     <section class="catalog-categories wrapper">
       <div class="catalog-categories__wrapper">
+        <!--BREADCRUMB-->
         <div class="catalog-categories__breadcrumbs">
             <ul class="catalog-categories__breadcrumbs-list">
                 <li class="catalog-categories__breadcrumbs-list-item"><a href="index.html"><svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -99,6 +100,7 @@
                 <li class="catalog-categories__breadcrumbs-list-item">каталог</li>
             </ul>
         </div>
+        <!--END OF BREADCRUMB-->
         <div class="catalog-categories__heading">
             <h2 class="catalog-categories__heading-title">категории</h2>
         </div>
@@ -148,7 +150,14 @@
                     <img src="./src/assets/catalog/grid.svg" alt="">
                     <img src="./src/assets/catalog/list.svg" alt="">
                 </div>
-                <div class="product-filter__block-dropdown-lists">dropdown</div>
+                <div class="product-filter__sort-select-block">
+                  <select name="sort" id="sort-select" class="product-filter__sort-select-input">
+                      <option value="">Сначала дешевые</option>
+                      <option value="">Сначала дорогие</option>
+                      <option value="">По категории от А до Я</option>
+                      <option value="">По категории от Я до А</option>
+                  </select>
+                </div>
             </div>
         </div>
     </section>
